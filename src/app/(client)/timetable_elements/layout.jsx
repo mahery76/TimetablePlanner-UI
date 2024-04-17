@@ -11,7 +11,7 @@ const LinkItem = ({linkPath, linkTitle}) => {
 export default function timetableLayout({children}) {
   return (
     <section>
-      <div className="flex gap-x-5 mt-5 overflow-x-auto  mb-4">
+      <div className="flex gap-x-5 mt-5 overflow-x-auto">
         <LinkItem linkPath="/timetable_elements/majors" linkTitle="Filières"/>
         <LinkItem linkPath="/timetable_elements/classes" linkTitle="Classes"/>
         <LinkItem linkPath="/timetable_elements/courses" linkTitle="Matières"/>

@@ -4,19 +4,19 @@ import NewTeacher from "./_components/NewTeacher";
 import TeachersList from "./_components/TeachersList";
 import { getAllteacher } from "./_api/teacherApi";
 function Teachers({ children }) {
-    const [teachers, setTeachers] = useState([]);
-    useEffect(() => {
-      getAllteacher(setTeachers);
-    }, []);
+  const [teachers, setTeachers] = useState([]);
+  useEffect(() => {
+    getAllteacher(setTeachers);
+  }, []);
   return (
     <div>
-      <NewTeacher teachers={teachers} setTeachers={setTeachers}/>
-      <TeachersList teachers={teachers} setTeachers={setTeachers}/>
-      {/*   teacher availabilities section */}
-      <div className="mt-2">
-        <h2>Les disponibilités des Enseignants</h2>
-        {children}
+      <div className="mt-8">
+        <NewTeacher teachers={teachers} setTeachers={setTeachers} />
       </div>
+      <div className="mt-6">
+        <TeachersList teachers={teachers} setTeachers={setTeachers} />
+      </div>
+      <div>{children}</div>
     </div>
   );
 }

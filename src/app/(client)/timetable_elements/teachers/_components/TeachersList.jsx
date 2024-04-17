@@ -7,8 +7,7 @@ import {deleteTeacher} from "../_api/teacherApi"
 function TeachersList({teachers, setTeachers}) {
   
   return (
-    <div className="mt-3">
-    <h2 className="">Listes des Enseignants</h2>
+    <div>
     <div className="flex my-2">
       <input type="text" className="bg-gray-100 w-full h-10 text-center "/>
     </div>

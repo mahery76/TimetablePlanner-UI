@@ -24,7 +24,7 @@ function NewTeacher({teachers, setTeachers}) {
       <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
         <h2 className="font-bold text-center mb-8">Nouveau Enseignant</h2>
 
-        <form onSubmit={addNewTeacher}>
+        <form onSubmit={addNewTeacher} className="w-72">
           <input
             className="w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
             type="text"

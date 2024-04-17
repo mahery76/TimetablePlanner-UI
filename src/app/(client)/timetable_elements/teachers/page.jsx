@@ -1,5 +1,12 @@
-import { redirect } from 'next/navigation'
-export default async function Profile() {
-    redirect('/timetable_elements/teachers/1')
-  // ...
+"use client";
+import React from "react";
+
+function Teachers() {
+  return (
+    <div>
+    
+    </div>
+  );
 }
+
+export default Teachers;

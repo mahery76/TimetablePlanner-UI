@@ -7,11 +7,11 @@ function Modal({ isOpen, children, onClose }) {
 
  return (
     <div 
-    className="modal-overlay fixed top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center" 
+    className="fixed top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center" 
     onClick={onClose}
     >
       <div 
-      className="modal-content bg-white p-5 w-3/4 rounded-xl" 
+      className="bg-white p-3 rounded-xl" 
       onClick={(e) => e.stopPropagation()}
       >
         {children}
