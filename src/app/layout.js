@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
         {/* header */}
         <div className="flex justify-between">
           <div className="flex">
-            <div className="text-2xl">Emplois du temps</div>
+            <div className="text-xl">Emplois du temps</div>
           </div>
 
-          <div className="flex gap-8 justify-center items-center ">
+          <div className="flex gap-4 justify-center items-center ">
             <Link href="/timetable">
               {/* <div>Timetable</div> */}
               <div className="text-2xl font-bold">
