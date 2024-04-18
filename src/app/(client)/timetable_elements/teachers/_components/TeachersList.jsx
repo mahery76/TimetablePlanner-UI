@@ -11,13 +11,13 @@ function TeachersList({teachers, setTeachers}) {
     <div className="flex my-2">
       <input type="text" className="bg-gray-100 w-full h-10 text-center "/>
     </div>
-    <div className="overflow-x-auto">
-      <table className="">
-        <thead>
+    <div className="overflow-auto max-h-72">
+      <table >
+        <thead >
           <tr>
-            <th className="px-4 "></th>
-            <th className="px-4 ">Nom</th>
-            <th className="px-4 ">Titre</th>
+            <th className="px-4 sticky top-0 bg-lightGray"></th>
+            <th className="px-4 sticky top-0 bg-lightGray">Nom</th>
+            <th className="px-4 sticky top-0 bg-lightGray">Titre</th>
           </tr>
         </thead>
         <tbody>

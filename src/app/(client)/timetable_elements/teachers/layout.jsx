@@ -9,7 +9,7 @@ function Teachers({ children }) {
     getAllteacher(setTeachers);
   }, []);
   return (
-    <div>
+    <div className="">
       <div className="mt-8">
         <NewTeacher teachers={teachers} setTeachers={setTeachers} />
       </div>

@@ -16,7 +16,7 @@ function NewTeacher({teachers, setTeachers}) {
   return (
     <div className="flex justify-center flex-col">
       <button
-        className="bg-violet-100 p-2 rounded-md"
+        className="bg-violet-primary p-2 rounded-lg border-2 border-violet-secondary"
         onClick={() => setIsNewTeacher(() => true)}
       >
         Ajouter enseignant
