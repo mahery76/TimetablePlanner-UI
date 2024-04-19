@@ -14,9 +14,9 @@ function NewTeacher({teachers, setTeachers}) {
   };
 
   return (
-    <div className="flex justify-center flex-col">
+    <div className="flex justify-center flex-col items-center">
       <button
-        className="bg-violet-primary p-2 rounded-lg border-2 border-violet-secondary"
+        className="text-white bg-gradient-to-br from-green-400 to-blue-600 focus:ring p-2 rounded-lg border-2  w-full sm:w-80 hover:scale-105"
         onClick={() => setIsNewTeacher(() => true)}
       >
         Ajouter enseignant
@@ -24,15 +24,15 @@ function NewTeacher({teachers, setTeachers}) {
       <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
         <h2 className="font-bold text-center mb-8">Nouveau Enseignant</h2>
 
-        <form onSubmit={addNewTeacher} className="w-72">
+        <form onSubmit={addNewTeacher} className="w-72 ">
           <input
-            className="w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
+            className=" bg-lightGray w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
             type="text"
             name="teacher_name"
             placeholder="Nom de l'Enseignant"
           />
           <input
-            className="w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
+            className=" bg-lightGray w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
             type="text"
             name="teacher_title"
             placeholder="Titre de l'Enseignant"
@@ -40,7 +40,7 @@ function NewTeacher({teachers, setTeachers}) {
           <input
             type="submit"
             onClick={() => addNewTeacher}
-            className="w-full bg-violet-100 py-1.5 rounded-lg"
+            className=" bg-violet-primary w-full bg-violet-100 py-1.5 rounded-lg border-2 border-violet-secondary"
             value="Ajouter"
           />
         </form>

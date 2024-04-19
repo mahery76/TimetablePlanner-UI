@@ -1,4 +1,4 @@
-import { db } from "../../../_lib/indexedDb";
+import { db } from "@/_lib/indexedDb";
 
 export const getAllteacher = (setTeachers) => {
   db.teachers.toArray().then(setTeachers);
