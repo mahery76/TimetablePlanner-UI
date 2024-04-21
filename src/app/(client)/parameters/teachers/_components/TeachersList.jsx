@@ -7,23 +7,24 @@ import { CiSearch } from "react-icons/ci";
 
 function TeachersList({ teachers, setTeachers }) {
   return (
-    <div className="sm:flex sm:flex-col sm:items-center">
+    <div className="sm:flex sm:flex-col sm:items-center w-full">
       <div className="flex my-2 w-full justify-center items-center">
-        <div className="w-full sm:w-80 flex items-center">
+        <div className="w-full  flex items-center">
           <CiSearch className="text-darkGray absolute ml-3 size-6" />
           <input
-            type= "text"
-            className="bg-white w-full  h-10 text-center rounded-md border-2 border-gray"
+            type="text"
+            className="bg-white w-full h-10 text-center rounded-md border-[1px] border-gray"
           />
         </div>
       </div>
-      <div className="overflow-auto max-h-[60vh]">
+
+      <div className="overflow-auto max-h-[50vh] w-full">
         <table>
           <thead>
             <tr>
-              <th className="px-4 sticky top-0 bg-lightGray"></th>
-              <th className="px-4 sticky top-0 bg-lightGray">Nom</th>
-              <th className="px-4 sticky top-0 bg-lightGray">Titre</th>
+              <th className="px-4 sticky top-0 bg-blue-50"></th>
+              <th className="px-4 sticky top-0 bg-blue-50">Nom</th>
+              <th className="px-4 sticky top-0 bg-blue-50">Titre</th>
             </tr>
           </thead>
           <tbody>

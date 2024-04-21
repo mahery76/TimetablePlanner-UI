@@ -11,7 +11,7 @@ function Modal({ isOpen, children, onClose }) {
     onClick={onClose}
     >
       <div 
-      className="bg-white p-3 rounded-xl" 
+      className="bg-blue-body p-3 rounded-xl" 
       onClick={(e) => e.stopPropagation()}
       >
         {children}

@@ -19,8 +19,12 @@ const Menu = ({ title, icon, path }) => {
   return (
     <Link
       href={path}
-      className={`${isPathMatched(pathname, path) ? "text-green-secondary border-b-2 border-green-secondary " : ""}
-      flex  hover:text-green-secondary hover:border-b-2 border-green-secondary `}
+      className={`${
+        isPathMatched(pathname, path)
+          ? "text-green-secondary"
+          : ""
+      }
+      flex  hover:text-green-secondary `}
     >
       <div className="hidden sm:block  p-2  ">{title}</div>
       <div className=" sm:hidden text-2xl font-bold  hover:scale-110">
@@ -33,13 +37,14 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-lightGray h-screen top-0">
+      <body className="bg-blue-50 h-screen top-0">
         {/* header */}
-        <div className="flex px-4 shadow-md h-16 justify-between items-center">
+        <div className="flex px-4 h-16 justify-between items-center">
           <div className="flex">
-            <div className="text-xl text-green-secondary font-bold">Emplois du temps</div>
+            <div className="text-xl text-green-secondary font-bold">
+              Emplois du temps
+            </div>
           </div>
-
           <div className="flex gap-4 justify-center items-center ">
             <Menu
               title="Emplois du temps"
@@ -47,12 +52,10 @@ export default function RootLayout({ children }) {
               icon={<CiCalendar />}
             />
             <Menu title="Activités" path="/activities" icon={<CiBoxList />} />
-            <Menu
-              title="Paramètres"
-              path="/parameters"
-              icon={<CiSettings />}
-            />
+            <Menu title="Paramètres" path="/parameters" icon={<CiSettings />} />
           </div>
+        </div>
+        <div className="flex h-0.5 bg-gradient-to-r from-blue-secondary to-green-secondary opacity-50">
         </div>
         {/* main */}
         <main>{children}</main>

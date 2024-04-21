@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,8 +12,10 @@ const LinkItem = ({ linkPath, linkTitle }) => {
     <Link
       href={linkPath}
       className={`
-      ${isPathMatched(pathname, linkPath)? "text-green-secondary border-b-2 border-green-secondary": ""} 
-      hover:text-green-secondary hover:border-b-2 border-green-secondary flex items-center justify-center p-2 whitespace-nowrap
+      ${isPathMatched(pathname, linkPath) ? "bg-green-primary" : ""} 
+      hover:bg-gradient-to-r from-blue-primary to-green-primary
+      bg-blue-primary
+      rounded-md flex items-center justify-center p-2 whitespace-nowrap
       `}
     >
       {linkTitle}
@@ -24,11 +26,8 @@ const LinkItem = ({ linkPath, linkTitle }) => {
 export default function timetableLayout({ children }) {
   return (
     <section>
-      <div className="flex gap-x-5 p-2 overflow-x-auto md:justify-end">
-        <LinkItem
-          linkPath="/parameters/teachers"
-          linkTitle="Enseignants"
-        />
+      <div className="flex gap-x-5 p-2 mt-2 overflow-x-auto md:justify-center md:mr-4">
+        <LinkItem linkPath="/parameters/teachers" linkTitle="Enseignants" />
         <LinkItem linkPath="/parameters/majors" linkTitle="Filières" />
         <LinkItem linkPath="/parameters/classes" linkTitle="Classes" />
         <LinkItem linkPath="/parameters/courses" linkTitle="Matières" />
@@ -43,7 +42,9 @@ export default function timetableLayout({ children }) {
         />
       </div>
 
-      <div className="px-4 ">{children}</div>
+      <div className="w-full sm:flex justify-center px-2">
+        <div className=" sm:max-w-[35em]">{children}</div>
+      </div>
     </section>
   );
 }

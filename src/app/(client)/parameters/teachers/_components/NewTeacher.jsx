@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { addTeacher } from "../_api/teacherApi";
-function NewTeacher({teachers, setTeachers}) {
+function NewTeacher({ teachers, setTeachers }) {
   const [isNewTeacher, setIsNewTeacher] = useState(false);
 
   const addNewTeacher = (event) => {
@@ -14,33 +14,44 @@ function NewTeacher({teachers, setTeachers}) {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex justify-center items-center">
+
       <button
-        className="text-white bg-gradient-to-br from-green-400 to-blue-600 focus:ring p-2 rounded-lg border-2  w-full sm:w-80 hover:scale-105"
+        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
+        bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
         onClick={() => setIsNewTeacher(() => true)}
       >
-        Ajouter enseignant
+        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          Ajouter enseignant
+        </span>
       </button>
-      <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
-        <h2 className="font-bold text-center mb-8">Nouveau Enseignant</h2>
 
-        <form onSubmit={addNewTeacher} className="w-72 ">
+      <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
+        <h2 className="font-bold text-center text-blue-secondary my-4">Nouveau Enseignant</h2>
+
+        <form onSubmit={addNewTeacher} className="w-72 p-4">
           <input
-            className=" bg-lightGray w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
+            className=" bg-my-white w-full bg-gray-100 mb-6 py-1.5 
+            rounded-md border-[1px] border-gray  text-center"
             type="text"
             name="teacher_name"
             placeholder="Nom de l'Enseignant"
+            required
           />
           <input
-            className=" bg-lightGray w-full bg-gray-100 mb-6 py-1.5 rounded-lg  text-center"
+            className=" bg-my-white w-full bg-gray-100 mb-6 py-1.5 rounded-md border-[1px] border-gray  text-center"
             type="text"
             name="teacher_title"
             placeholder="Titre de l'Enseignant"
+            required
           />
           <input
             type="submit"
             onClick={() => addNewTeacher}
-            className=" bg-violet-primary w-full bg-violet-100 py-1.5 rounded-lg border-2 border-violet-secondary"
+            className=" 
+            bg-gradient-to-br from-green-primary to-blue-secondary 
+            py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
+            "
             value="Ajouter"
           />
         </form>
