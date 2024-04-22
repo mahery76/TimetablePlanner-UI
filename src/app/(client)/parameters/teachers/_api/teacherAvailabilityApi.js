@@ -43,6 +43,7 @@ export const getAvailability = (teacher_id, availability_date, timeslot_id, setA
                 setIsChecked(true)
             } else {
                 console.log('No availability found');
+                setIsChecked(false)
             }
         })
         .catch(error => {

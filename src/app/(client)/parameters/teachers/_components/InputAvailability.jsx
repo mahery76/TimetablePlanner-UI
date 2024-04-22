@@ -5,6 +5,7 @@ function InputAvailability({date: availability_date, timeslot: timeslot_id}) {
   const { id: teacher_id } = useParams();
   const [isChecked, setIsChecked] = useState(false)
   const [availabilityFound, setAvailabilityFound] = useState({})
+
   const handleChange = () => {
     if(isChecked){
       deleteTeacherAvailability(availabilityFound["teacher_availability_id"])
@@ -15,6 +16,7 @@ function InputAvailability({date: availability_date, timeslot: timeslot_id}) {
       setIsChecked(true)
     }
   }
+  
   useEffect(() => {
       getAvailability(teacher_id, availability_date, timeslot_id, setAvailabilityFound, setIsChecked)
   },[teacher_id, availability_date, timeslot_id])
