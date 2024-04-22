@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { TiDeleteOutline } from "react-icons/ti";
 import Link from "next/link";
-import { deleteTeacher } from "../_api/teacherApi";
+import { deleteTeacher } from "@/parameters/teachers/_api/teacherApi";
 import { CiSearch } from "react-icons/ci";
+import { usePathname } from "next/navigation";
 
 function TeachersList({ teachers, setTeachers }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,9 +29,9 @@ function TeachersList({ teachers, setTeachers }) {
         </div>
       </div>
 
-      <div className="overflow-auto max-h-[50vh] w-full">
+      <div className="overflow-auto max-h-[45vh] w-full">
         <table>
-          <thead>
+          <thead className="mb-3">
             <tr>
               <th className="px-4 sticky top-0 bg-blue-50"></th>
               <th className="px-4 sticky top-0 bg-blue-50">Nom</th>
@@ -39,24 +40,34 @@ function TeachersList({ teachers, setTeachers }) {
           </thead>
           <tbody>
             {filteredTeachers.map((teacher) => (
-              <tr key={teacher.teacher_id} className="odd:bg-my-white even:bg-lightGray hover:bg-green-primary hover:opacity-100">
+              <tr
+                key={teacher.teacher_id}
+                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+              >
+                {/* delete column */}
                 <td
-                  className="whitespace-nowrap px-2 py-2" 
+                  className="whitespace-nowrap px-2 py-2"
                   onClick={() =>
                     deleteTeacher(teacher.teacher_id, setTeachers, teachers)
                   }
                 >
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
-                <td className="whitespace-nowrap mx-4 my-2">
-                  <Link href={`/parameters/teachers/${teacher.teacher_id}`}
-                  className="flex">
+                {/* name column */}
+                <td className="whitespace-nowrap px-4 py-3">
+                  <Link
+                    href={`/parameters/teachers/${teacher.teacher_id}?teacher_name=${teacher.teacher_name}`}
+                    className="flex"
+                  >
                     {teacher.teacher_name}
                   </Link>
                 </td>
+                {/* title column */}
                 <td className="whitespace-nowrap mx-4 my-2">
-                  <Link href={`/parameters/teachers/${teacher.teacher_id}`}
-                  className="flex">
+                  <Link
+                    href={`/parameters/teachers/${teacher.teacher_id}?teacher_name=${teacher.teacher_name}`}
+                    className="flex"
+                  >
                     {teacher.teacher_title}
                   </Link>
                 </td>

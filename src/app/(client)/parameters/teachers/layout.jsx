@@ -22,3 +22,4 @@ function Teachers({ children }) {
 }
 
 export default Teachers;
+                                                    

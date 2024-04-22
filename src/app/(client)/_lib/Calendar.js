@@ -8,6 +8,12 @@ export const isSameDay = (date1, date2) => {
     );
 }
 
+export const normalizeDate = (inputDate) => {
+    const normalizeDate = new Date(inputDate)
+    normalizeDate.setHours(0,0,0,0);
+    return normalizeDate
+}
+
 export const toFrDate = (currentDay) => {
     const options = { weekday: 'short', day: '2-digit', month: '2-digit', year: 'numeric' };
     const date = new Date(currentDay);

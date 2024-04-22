@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "my-white": "rgb(255,255,255)",
         "blue-body": "#eff6ff",
+        "blue-body-secondary": "#e0eeff",
         "blue-primary": "rgb(140 212 255)",
         "blue-secondary": "rgb(3, 113, 187)",
         "red-primary": "rgb(230, 125, 125)",

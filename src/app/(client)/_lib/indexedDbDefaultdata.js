@@ -90,16 +90,16 @@ export const userRolesData = [
   //timeslots
   export const timeslotsData = [
     {
-      timeslot_value: "08:00 AM - 10:00 AM",
+      timeslot_value: "08:00 - 10:00",
     },
     {
-      timeslot_value: "10:00 AM - 12:00 PM",
+      timeslot_value: "10:00 - 12:00",
     },
     {
-      timeslot_value: "01:00 PM - 03:00 PM",
+      timeslot_value: "13:00 - 15:00",
     },
     {
-      timeslot_value: "03:00 PM - 05:00 PM",
+      timeslot_value: "15:00 - 17:00",
     },
   ];
   
