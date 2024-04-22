@@ -10,11 +10,11 @@ function Teachers({ children }) {
   }, []);
   return (
     <div>
-      <div className="mt-8">
-        <NewTeacher teachers={teachers} setTeachers={setTeachers} />
-      </div>
       <div className="mt-6">
         <TeachersList teachers={teachers} setTeachers={setTeachers} />
+      </div>
+      <div className="mt-8">
+        <NewTeacher teachers={teachers} setTeachers={setTeachers} />
       </div>
       <div>{children}</div>
     </div>

@@ -37,7 +37,7 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-blue-50 h-screen top-0">
+      <body className="bg-blue-50 ">
         {/* header */}
         <div className="flex px-4 h-16 justify-between items-center">
           <div className="flex">
