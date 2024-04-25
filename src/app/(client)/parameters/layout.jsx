@@ -12,9 +12,8 @@ const LinkItem = ({ linkPath, linkTitle }) => {
     <Link
       href={linkPath}
       className={`
-      ${isPathMatched(pathname, linkPath) ? "bg-green-primary" : ""} 
-      hover:bg-gradient-to-r from-blue-primary to-green-primary
-      bg-blue-primary
+      ${isPathMatched(pathname, linkPath) ? "bg-gradient-to-r from-cyan-400 to-green-primary" : ""} 
+      hover:bg-gradient-to-r from-cyan-400 to-green-primary
       rounded-md flex items-center justify-center p-2 whitespace-nowrap
       `}
     >

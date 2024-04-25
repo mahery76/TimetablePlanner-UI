@@ -1,9 +1,12 @@
 "use client";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Modal from "../_components/Modal";
+import Modal from "@/parameters/teachers/_components/Modal";
 import { getAllTimeslots } from "@/parameters/timeslots/_api/timeslotsApi";
-import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
+import {
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
 import InputAvailability from "@/parameters/teachers/_components/InputAvailability";
 import {
   toFrDate,
@@ -14,8 +17,8 @@ import {
 
 function WeekdayCalendar() {
   // to get the name of the teacher
-  const searchParams = useSearchParams()
-  const teacher_name = searchParams.get('teacher_name')
+  const searchParams = useSearchParams();
+  const teacher_name = searchParams.get("teacher_name");
   // close the model component
   const router = useRouter();
   const [availabilityIsOpen, setAvailabilityIsOpen] = useState(true);
@@ -29,14 +32,14 @@ function WeekdayCalendar() {
   const [timeslots, setTimeslots] = useState([]);
   useEffect(() => {
     setWeekDates(generateWeekDates(currentDay));
-    getAllTimeslots(setTimeslots)
+    getAllTimeslots(setTimeslots);
     console.log(searchParams);
   }, [currentDay]);
   return (
     <>
       <Modal isOpen={availabilityIsOpen} onClose={closeAvailabilityWindow}>
-        <div className="flex justify-center">
-          {teacher_name && <p>Disponibilités de : {teacher_name}</p>}
+        <div className="flex w-full justify-center items-center text-center">
+          {teacher_name && <p className="max-w-[20em]"><span className="font-bold">Disponibilités de :</span> {teacher_name}</p>}
         </div>
         {/* date navigation  */}
         <div className="flex justify-between mt-2">

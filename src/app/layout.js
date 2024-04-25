@@ -37,12 +37,12 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-blue-50 ">
+      <body className="bg-blue-50 font-roboto text-base">
         {/* header */}
         <div className="flex px-4 h-16 justify-between items-center">
           <div className="flex">
-            <div className="text-xl text-green-secondary font-bold">
-              Emplois du temps
+            <div className="text-xl text-cyan-600 font-bold">
+              Gérer emplois du temps
             </div>
           </div>
           <div className="flex gap-4 justify-center items-center ">

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import NewTeacher from "./_components/NewTeacher";
 import TeachersList from "./_components/TeachersList";
 import { getAllteacher } from "./_api/teacherApi";
+
 function Teachers({ children }) {
   const [teachers, setTeachers] = useState([]);
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-import { addTeacher } from "../_api/teacherApi";
+import { addTeacher } from "@/parameters/teachers/_api/teacherApi";
 function NewTeacher({ teachers, setTeachers }) {
   const [isNewTeacher, setIsNewTeacher] = useState(false);
 
@@ -27,7 +27,7 @@ function NewTeacher({ teachers, setTeachers }) {
       </button>
 
       <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
-        <h2 className="font-bold text-center text-blue-secondary my-4">Nouveau Enseignant</h2>
+        <h2 className="font-bold text-center text-cyan-600 my-4">Nouveau Enseignant</h2>
 
         <form onSubmit={addNewTeacher} className="w-72 p-4">
           <input
@@ -47,7 +47,6 @@ function NewTeacher({ teachers, setTeachers }) {
           />
           <input
             type="submit"
-            onClick={() => addNewTeacher}
             className=" 
             bg-gradient-to-br from-green-primary to-blue-secondary 
             py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white

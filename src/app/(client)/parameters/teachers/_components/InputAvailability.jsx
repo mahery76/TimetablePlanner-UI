@@ -23,7 +23,7 @@ function InputAvailability({date: availability_date, timeslot: timeslot_id}) {
   return (
     <div>
       <input 
-      className="w-5 h-6" 
+      className="w-5 h-6 text-green-primary focus:ring-green-primary" 
       type="checkbox" 
       onChange={handleChange}
       checked={isChecked}

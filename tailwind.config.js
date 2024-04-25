@@ -12,11 +12,14 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'roboto': ['Roboto', 'Arial', 'sans-serif']
+      },
       colors: {
         "my-white": "rgb(255,255,255)",
         "blue-body": "#eff6ff",
         "blue-body-secondary": "#e0eeff",
-        "blue-primary": "rgb(140 212 255)",
+        "blue-primary": "cyan-600",
         "blue-secondary": "rgb(3, 113, 187)",
         "red-primary": "rgb(230, 125, 125)",
         "red-secondary": "rgb(230, 125, 125)",
