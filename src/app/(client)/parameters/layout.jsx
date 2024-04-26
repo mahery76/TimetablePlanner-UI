@@ -37,7 +37,7 @@ export default function timetableLayout({ children }) {
           linkTitle="Créneaux horaires"
         />
         <LinkItem
-          linkPath="/parameters/core_classes"
+          linkPath="/parameters/core_class_refs"
           linkTitle="Troncs communs"
         />
       </div>
