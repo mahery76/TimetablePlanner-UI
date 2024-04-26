@@ -28,6 +28,7 @@ function TeachersList({ teachers, setTeachers }) {
         </div>
       </div>
 
+    {/* teachers's list */}
       <div className="overflow-auto max-h-[45vh] w-full">
         <table>
           <thead className="mb-3">
@@ -74,6 +75,7 @@ function TeachersList({ teachers, setTeachers }) {
             ))}
           </tbody>
         </table>
+
       </div>
     </div>
   );

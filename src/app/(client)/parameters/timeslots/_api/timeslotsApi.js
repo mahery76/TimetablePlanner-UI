@@ -24,11 +24,11 @@ export const deleteTimeslot = (timeslot_id, setTimeslots, timeslots) => {
     .delete(timeslot_id)
     .then(() => {
       console.log("Créneaux supprimé avec succés")
+      setTimeslots(timeslots.filter(timeslot => timeslot.timeslot_id !== timeslot_id))
     })
     .catch((error) =>{
       console.error("error deleting timeslot: ", error)
     })
-    setTimeslots(timeslots.filter(timeslot => timeslot.timeslot_id !== timeslot_id))
   }
 }
 

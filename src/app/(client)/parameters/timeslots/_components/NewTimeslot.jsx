@@ -39,7 +39,7 @@ function NewTimeslot({ timeslots, setTimeslots }) {
             className=" bg-my-white w-full bg-gray-100 mb-6 py-1.5 
       rounded-md border-[1px] border-gray  text-center"
             type="text"
-            name="teacher_name"
+            name="timeslot_value"
             placeholder="Référence du créneaux"
             required
           />
