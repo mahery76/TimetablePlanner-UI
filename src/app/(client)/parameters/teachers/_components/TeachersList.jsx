@@ -15,7 +15,7 @@ function TeachersList({ teachers, setTeachers }) {
   );
 
   return (
-    <div className="sm:flex sm:flex-col sm:items-center w-full">
+    <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       {/* Teacher input search */}
       <div className="flex my-2 w-full items-center">
         <div className="w-full  flex items-center">

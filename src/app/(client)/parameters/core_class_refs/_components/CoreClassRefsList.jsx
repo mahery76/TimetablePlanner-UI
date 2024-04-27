@@ -12,7 +12,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
       .includes(searchTerm.toLowerCase())
   );
   return (
-    <div className="sm:flex sm:flex-col sm:items-center w-full">
+    <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       {/* Timeslot input search */}
       <div className="flex my-2 w-full items-center">
         <div className="w-full  flex items-center">

@@ -17,7 +17,7 @@ function Teachers({ children }) {
       <div className="mt-8">
         <NewTeacher teachers={teachers} setTeachers={setTeachers} />
       </div>
-      <div>{children}</div>
+      <div className="">{children}</div>
     </div>
   );
 }

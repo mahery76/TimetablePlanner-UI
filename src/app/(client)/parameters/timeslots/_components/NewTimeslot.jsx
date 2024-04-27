@@ -18,7 +18,7 @@ function NewTimeslot({ timeslots, setTimeslots }) {
     <div className="flex justify-center items-center">
       <button
         className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-  bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
+                    bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
         onClick={() => setIsNewTimeslot(() => true)}
       >
         <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">

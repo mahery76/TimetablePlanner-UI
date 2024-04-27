@@ -1,18 +1,23 @@
-"use client"
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 import Modal from "./Modal";
-import { addCore_class_ref } from '../_api/core_class_refsApi';
+import { addCore_class_ref } from "../_api/core_class_refsApi";
 
 function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
-    const [isNew_Core_class_ref, setIsNew_Core_class_ref] = useState(false)
-    const addNewCore_class_ref = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const data = new FormData(form)
-        const object = {}
-        data.forEach((value, key) => (object[key] = value));
-        addCore_class_ref(object, setIsNew_Core_class_ref, core_class_refs, setCore_class_refs)
-    }
+  const [isNew_Core_class_ref, setIsNew_Core_class_ref] = useState(false);
+  const addNewCore_class_ref = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const data = new FormData(form);
+    const object = {};
+    data.forEach((value, key) => (object[key] = value));
+    addCore_class_ref(
+      object,
+      setIsNew_Core_class_ref,
+      core_class_refs,
+      setCore_class_refs
+    );
+  };
   return (
     <div className="flex justify-center items-center">
       <button
@@ -53,7 +58,7 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
         </form>
       </Modal>
     </div>
-  )
+  );
 }
 
-export default NewCoreClassRef
+export default NewCoreClassRef;

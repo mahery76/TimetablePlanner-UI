@@ -29,7 +29,7 @@ export default function timetableLayout({ children }) {
       <div className="flex gap-x-5 p-2 mt-2 overflow-x-auto md:justify-center md:mr-4">
         <LinkItem linkPath="/parameters/teachers" linkTitle="Enseignants" />
         <LinkItem linkPath="/parameters/majors" linkTitle="Filières" />
-        <LinkItem linkPath="/parameters/classes" linkTitle="Classes" />
+        <LinkItem linkPath="/parameters/groups" linkTitle="Classes" />
         <LinkItem linkPath="/parameters/courses" linkTitle="Matières" />
         <LinkItem linkPath="/parameters/rooms" linkTitle="Salles" />
         <LinkItem
@@ -44,7 +44,7 @@ export default function timetableLayout({ children }) {
 
     {/* parameters content */}
       <div className="w-full sm:flex justify-center px-4">
-        <div className=" sm:max-w-[35em]">{children}</div>
+        <div className="">{children}</div>
       </div>
     </section>
   );
