@@ -17,7 +17,7 @@ function TeachersList({ teachers, setTeachers }) {
   return (
     <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       {/* Teacher input search */}
-      <div className="flex my-2 w-full items-center">
+      <div className="flex my-2 w-full items-center mb-4">
         <div className="w-full  flex items-center">
           <CiSearch className="text-darkGray absolute ml-3 size-6" />
           <input
@@ -46,7 +46,7 @@ function TeachersList({ teachers, setTeachers }) {
               >
                 {/* delete column */}
                 <td
-                  className="whitespace-nowrap px-2 py-2"
+                  className="whitespace-nowrap px-2 py-3"
                   onClick={() =>
                     deleteTeacher(teacher.teacher_id, setTeachers, teachers)
                   }

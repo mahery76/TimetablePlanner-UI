@@ -5,6 +5,7 @@ import { addTimeslot } from "@/parameters/timeslots/_api/timeslotsApi";
 
 function NewTimeslot({ timeslots, setTimeslots }) {
   const [isNewTimeslot, setIsNewTimeslot] = useState(false);
+  
 
   const addNewTimeslot = (event) => {
     event.preventDefault();

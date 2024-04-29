@@ -15,7 +15,7 @@ function TimeslotsList({ timeslots, setTimeslots }) {
     <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       
       {/* Timeslot input search */}
-      <div className="flex my-2 w-full items-center">
+      <div className="flex my-2 w-full items-center mb-4">
         <div className="w-full  flex items-center">
           <CiSearch className="text-darkGray absolute ml-3 size-6" />
           <input
@@ -31,6 +31,7 @@ function TimeslotsList({ timeslots, setTimeslots }) {
         <table className="flex flex-col items-center">
           <thead className="mb-3">
             <tr>
+              {/* for the delete button column */}
               <th className="px-4 sticky top-0 bg-blue-50"></th>
               <th className="px-4 sticky top-0 bg-blue-50">Créneaux</th>
             </tr>
@@ -54,7 +55,7 @@ function TimeslotsList({ timeslots, setTimeslots }) {
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
                 <td>
-                  <div className="flex">{timeslot.timeslot_value}</div>
+                  <div className="whitespace-nowrap px-2 py-3">{timeslot.timeslot_value}</div>
                 </td>
               </tr>
             ))}

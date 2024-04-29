@@ -14,7 +14,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
   return (
     <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       {/* Timeslot input search */}
-      <div className="flex my-2 w-full items-center">
+      <div className="flex my-2 w-full items-center mb-4">
         <div className="w-full  flex items-center">
           <CiSearch className="text-darkGray absolute ml-3 size-6" />
           <input
@@ -41,7 +41,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
                 className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
               >
                 <td
-                  className="whitespace-nowrap px-2 py-2"
+                  className="whitespace-nowrap px-2 py-3"
                   onClick={() =>
                     deleteCore_class_ref(
                         core_class_ref.core_class_ref_id,
@@ -53,7 +53,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
                 <td>
-                  <div className="flex">{core_class_ref.core_class_ref_name}</div>
+                  <div className="flex whitespace-nowrap px-2 py-3">{core_class_ref.core_class_ref_name}</div>
                 </td>
               </tr>
             ))}
