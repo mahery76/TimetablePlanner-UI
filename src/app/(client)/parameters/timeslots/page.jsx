@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import NewTimeslot from "./_components/NewTimeslot";
 import TimeslotsList from "./_components/TimeslotsList";
 import { getAllTimeslots } from "./_api/timeslotsApi";
-import { db } from "@/_lib/indexedDb";
 
 function Timeslots() {
   const [timeslots, setTimeslots] = useState([]);
