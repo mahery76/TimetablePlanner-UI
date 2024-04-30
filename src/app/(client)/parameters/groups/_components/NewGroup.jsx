@@ -2,19 +2,17 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { addGroup } from "@/parameters/groups/_api/groupApi";
+import { useRouter } from "next/navigation";
 function NewGroup({ majors }) {
   const [isNewGroup, setIsNewGroup] = useState(false);
-
- 
-
+  const router = useRouter()
   const addNewGroup = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const form = event.target;
     const data = new FormData(form);
     const object = {};
     data.forEach((value, key) => (object[key] = value));
-    addGroup(object);
-    
+    addGroup(object, router);
   };
   return (
     <div className="flex justify-center items-center">

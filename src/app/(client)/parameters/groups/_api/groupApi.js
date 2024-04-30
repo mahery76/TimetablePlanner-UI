@@ -1,7 +1,6 @@
 import { db } from "@/_lib/indexedDb";
 import { innerJoin } from "@/_lib/query";
 
-
 // Inside your component
 
 export const getAllGroups = (setGroups) => {
@@ -26,7 +25,7 @@ export const getAllGroups = (setGroups) => {
   });
 };
 
-export const addGroup = (newGroup) => {
+export const addGroup = (newGroup, router) => {
   let newGroupData = {
     group_name: newGroup["group_name"],
     group_size: Number(newGroup["group_size"]),
@@ -35,10 +34,8 @@ export const addGroup = (newGroup) => {
   db.groups
     .add(newGroupData)
     .then(() => {
-      alert("Classe ajouté avec succés");
-      history.push('/parameters/groups'); // Redirect to /parameters/groups
-
-
+      // this doesn't work because the default submit event is not prevented
+      // router.push("/parameters/groups");
     })
     .catch((error) => {
       alert("Echec pour l'ajout de classe");
