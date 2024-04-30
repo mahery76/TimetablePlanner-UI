@@ -39,7 +39,7 @@ function NewMajor({ majors, setMajors }) {
       rounded-md border-[1px] border-gray  text-center"
             type="text"
             name="major_name"
-            placeholder="Intervale du créneaux"
+            placeholder="Nom du département"
             required
           />
           <input

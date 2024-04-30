@@ -104,30 +104,30 @@ export const timeslotsData = [
 ];
 
 //classrooms
-export const classroomsData = [
+export const roomsData = [
   {
-    classroom_name: "Room 101",
-    classroom_capacity: 30,
+    room_name: "Room 101",
+    room_capacity: 30,
   },
   {
-    classroom_name: "Room 102",
-    classroom_capacity: 25,
+    room_name: "Room 102",
+    room_capacity: 25,
   },
   {
-    classroom_name: "Room 103",
-    classroom_capacity: 20,
+    room_name: "Room 103",
+    room_capacity: 20,
   },
   {
-    classroom_name: "Room 201",
-    classroom_capacity: 30,
+    room_name: "Room 201",
+    room_capacity: 30,
   },
   {
-    classroom_name: "Room 202",
-    classroom_capacity: 25,
+    room_name: "Room 202",
+    room_capacity: 25,
   },
   {
-    classroom_name: "Computer Lab",
-    classroom_capacity: 35,
+    room_name: "Computer Lab",
+    room_capacity: 35,
   },
 ];
 

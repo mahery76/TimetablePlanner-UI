@@ -43,7 +43,7 @@ export default function timetableLayout({ children }) {
       </div>
 
     {/* parameters content */}
-      <div className="w-full sm:flex justify-center px-4">
+      <div className="w-full sm:flex justify-center px-8">
         <div className="">{children}</div>
       </div>
     </section>
