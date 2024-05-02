@@ -27,21 +27,21 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
 
        {/* core_class_refs's list */}
        <div className="overflow-auto max-h-[45vh] w-full">
-        <table className="flex flex-col items-center">
+        <table className="flex flex-col w-full">
           <thead className="mb-3">
             <tr>
               <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50">Références des Activités en Tronc commun</th>
+              <th className="px-4 sticky top-0 bg-blue-50 mx-auto w-full">Références des Activités en Tronc commun</th>
             </tr>
           </thead>
           <tbody>
             {filteredCore_class_ref.map((core_class_ref) => (
               <tr
                 key={core_class_ref.core_class_ref_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="flex w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
               >
                 <td
-                  className="whitespace-nowrap px-2 py-3"
+                  className="whitespace-nowrap px-2 py-3 my-auto"
                   onClick={() =>
                     deleteCore_class_ref(
                         core_class_ref.core_class_ref_id,
@@ -53,7 +53,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
                 <td>
-                  <div className="flex whitespace-nowrap px-2 py-3">{core_class_ref.core_class_ref_name}</div>
+                  <div className="whitespace-nowrap px-2 py-3">{core_class_ref.core_class_ref_name}</div>
                 </td>
               </tr>
             ))}

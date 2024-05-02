@@ -28,7 +28,7 @@ function TimeslotsList({ timeslots, setTimeslots }) {
 
     {/* timeslots's list */}
       <div className="overflow-auto max-h-[45vh] w-full">
-        <table className="flex flex-col items-center">
+        <table className="flex flex-col w-full">
           <thead className="mb-3">
             <tr>
               {/* for the delete button column */}
@@ -40,10 +40,10 @@ function TimeslotsList({ timeslots, setTimeslots }) {
             {filteredTimeslots.map((timeslot) => (
               <tr
                 key={timeslot.timeslot_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className=" flex w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
               >
                 <td
-                  className="whitespace-nowrap px-2 py-2"
+                  className="whitespace-nowrap px-2 py-2 my-auto"
                   onClick={() =>
                     deleteTimeslot(
                       timeslot.timeslot_id,

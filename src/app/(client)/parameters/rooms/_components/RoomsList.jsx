@@ -7,10 +7,10 @@ import { deleteRoom } from "@/parameters/rooms/_api/roomApi";
 function RoomsList({ rooms, setRooms }) {
   const [searchTerm, setSearchTerm] = useState("");
 
-//   const filteredRooms = rooms.filter(
-//     (room) =>
-//     room.room_name.toLowerCase().includes(searchTerm.toLowerCase())
-//   );
+  const filteredRooms = rooms.filter(
+    (room) =>
+    room.room_name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <div className="sm:flex sm:flex-col sm:items-center sm:w-[30rem]">
       {/* rooms input search */}
@@ -32,12 +32,12 @@ function RoomsList({ rooms, setRooms }) {
             <tr>
               {/* for the delete button column */}
               <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50">Noms</th>
+              <th className="px-4 sticky top-0 bg-blue-50">Salles</th>
               <th className="px-4 sticky top-0 bg-blue-50">Capacité</th>
             </tr>
           </thead>
           <tbody>
-            {rooms.map((room) => (
+            {filteredRooms.map((room) => (
               <tr
                 key={room.room_id}
                 className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"

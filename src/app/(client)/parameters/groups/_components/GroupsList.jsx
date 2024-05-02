@@ -26,10 +26,11 @@ function GroupsList({ groups, setGroups }) {
         </div>
       </div>
       {/* groups's list */}
-      <div className="overflow-auto max-h-[45vh] w-full flex justify-center">
-        <table>
+      <div className="overflow-auto max-h-[45vh] w-full">
+        <table className="w-full">
           <thead className="mb-3">
             <tr>
+              {/* for the delete button column */}
               <th className="px-4 sticky top-0 bg-blue-50"></th>
               <th className="px-4 sticky top-0 bg-blue-50">Classe</th>
               <th className="px-4 sticky top-0 bg-blue-50">Effectif</th>
@@ -48,13 +49,13 @@ function GroupsList({ groups, setGroups }) {
                 >
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
-                <td className="text-center whitespace-nowrap px-2 py-3">
+                <td className=" whitespace-nowrap px-2 py-3">
                   {group.group_name}
                 </td>
-                <td className="text-center whitespace-nowrap px-2 py-3">
+                <td className=" whitespace-nowrap px-2 py-3">
                   {group.group_size}
                 </td>
-                <td className="text-center whitespace-nowrap px-2 py-3">
+                <td className=" whitespace-nowrap px-2 py-3">
                   {group.major_name}
                 </td>
               </tr>

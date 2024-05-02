@@ -30,12 +30,12 @@ function TeachersList({ teachers, setTeachers }) {
 
     {/* teachers's list */}
       <div className="overflow-auto max-h-[45vh] w-full">
-        <table>
+        <table className="w-full">
           <thead className="mb-3">
             <tr>
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50">Nom</th>
-              <th className="px-4 sticky top-0 bg-blue-50">Titre</th>
+              <th className="px-4 sticky top-0 bg-blue-50 ml-0"></th>
+              <th className="px-4 sticky top-0 bg-blue-50 ml-0">Nom</th>
+              <th className="px-4 sticky top-0 bg-blue-50 ml-0">Titre</th>
             </tr>
           </thead>
           <tbody>

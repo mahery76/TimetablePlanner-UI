@@ -25,8 +25,8 @@ function CoursesList({ courses, setCourses }) {
       </div>
 
       {/* list */}
-      <div className="overflow-auto max-h-[45vh] w-full flex justify-center">
-        <table>
+      <div className="overflow-auto max-h-[45vh] w-full">
+        <table className="w-full">
           <thead className="mb-3">
             <tr>
               <th className="px-4 sticky top-0 bg-blue-50"></th>
@@ -50,8 +50,8 @@ function CoursesList({ courses, setCourses }) {
                 >
                   <TiDeleteOutline className="text-xl text-violet-500 cursor-pointer hover:scale-125 " />
                 </td>
-                <td className="text-center whitespace-nowrap px-2 py-3">{course.course_name}</td>
-                <td className="text-center whitespace-nowrap px-2 py-3">{course.major_name}</td>
+                <td className="whitespace-nowrap px-2 py-3">{course.course_name}</td>
+                <td className="whitespace-nowrap px-2 py-3">{course.major_name}</td>
               </tr>
             ))}
           </tbody>
