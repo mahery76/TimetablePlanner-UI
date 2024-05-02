@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { db } from "@/_lib/indexedDb";
+import { useRouter } from "next/navigation";
 import { getAllGroups } from "./_api/groupApi";
 import GroupsList from "./_components/GroupsList";
 import NewGroup from './_components/NewGroup'
-import { db } from "@/_lib/indexedDb";
-import { useRouter } from "next/navigation";
 
 
 function groups() {

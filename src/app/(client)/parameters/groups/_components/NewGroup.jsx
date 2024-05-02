@@ -6,14 +6,16 @@ import { useRouter } from "next/navigation";
 function NewGroup({ majors }) {
   const [isNewGroup, setIsNewGroup] = useState(false);
   const router = useRouter()
-  const addNewGroup = (event) => {
+
+  const handleSubmit = (event) => {
     // event.preventDefault();
     const form = event.target;
     const data = new FormData(form);
-    const object = {};
-    data.forEach((value, key) => (object[key] = value));
-    addGroup(object, router);
+    const groupData = {};
+    data.forEach((value, key) => (groupData[key] = value));
+    addGroup(groupData, router);
   };
+
   return (
     <div className="flex justify-center items-center">
       <button
@@ -30,7 +32,7 @@ function NewGroup({ majors }) {
           Nouvelle Classe
         </h2>
 
-        <form onSubmit={addNewGroup} className="w-72 p-4">
+        <form onSubmit={handleSubmit} className="w-72 p-4">
           <input
             className=" bg-my-white w-full bg-gray-100 mb-6 py-1.5 
                         rounded-md border-[1px] border-gray  text-center"

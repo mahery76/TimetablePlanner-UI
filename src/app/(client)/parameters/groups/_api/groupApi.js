@@ -1,7 +1,6 @@
 import { db } from "@/_lib/indexedDb";
 import { innerJoin } from "@/_lib/query";
 
-// Inside your component
 
 export const getAllGroups = (setGroups) => {
   let groups = [];
@@ -34,6 +33,7 @@ export const addGroup = (newGroup, router) => {
   db.groups
     .add(newGroupData)
     .then(() => {
+      console.log("new group added")
       // this doesn't work because the default submit event is not prevented
       // router.push("/parameters/groups");
     })
@@ -57,3 +57,4 @@ export const deleteGroup = (group_id, setGroups, groups) => {
       });
   }
 };
+
