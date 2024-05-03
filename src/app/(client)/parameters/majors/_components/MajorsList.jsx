@@ -23,7 +23,7 @@ function MajorsList({ majors, setMajors }) {
         </div>
       </div>
       {/* majors's list */}
-      <div className="overflow-auto max-h-[45vh] w-full">
+      <div className="overflow-auto h-[45vh] w-full">
         <table className="flex flex-col w-full">
           <thead className="mb-3">
             <tr>

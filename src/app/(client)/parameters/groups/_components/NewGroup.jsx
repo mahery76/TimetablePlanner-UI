@@ -5,7 +5,7 @@ import { addGroup } from "@/parameters/groups/_api/groupApi";
 import { useRouter } from "next/navigation";
 function NewGroup({ majors }) {
   const [isNewGroup, setIsNewGroup] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = (event) => {
     // event.preventDefault();
@@ -49,13 +49,21 @@ function NewGroup({ majors }) {
             placeholder="Effectif"
             required
           />
-          <select name="major_id" id="" className="bg-my-white w-full bg-gray-100 mb-6 py-1.5 
-                        rounded-md border-[1px] border-gray  text-center">
-            {
-              majors.map((major) => (
-                <option key={major.major_id} value={major.major_id}>{major.major_name}</option>
-              ))
-            }
+          <label htmlFor="major_id" className="text-darkGray text-sm">
+            Département
+          </label>
+
+          <select
+            name="major_id"
+            id=""
+            className="bg-my-white w-full bg-gray-100 mb-6 py-1.5 
+                        rounded-md border-[1px] border-gray  text-center"
+          >
+            {majors.map((major) => (
+              <option key={major.major_id} value={major.major_id}>
+                {major.major_name}
+              </option>
+            ))}
           </select>
 
           <input

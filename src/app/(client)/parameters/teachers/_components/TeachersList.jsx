@@ -29,7 +29,7 @@ function TeachersList({ teachers, setTeachers }) {
       </div>
 
     {/* teachers's list */}
-      <div className="overflow-auto max-h-[45vh] w-full">
+      <div className="overflow-auto h-[45vh] w-full">
         <table className="w-full">
           <thead className="mb-3">
             <tr>

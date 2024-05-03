@@ -25,7 +25,7 @@ function CoursesList({ courses, setCourses }) {
       </div>
 
       {/* list */}
-      <div className="overflow-auto max-h-[45vh] w-full">
+      <div className="overflow-auto h-[45vh] w-full">
         <table className="w-full">
           <thead className="mb-3">
             <tr>

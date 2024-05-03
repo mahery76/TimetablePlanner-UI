@@ -26,7 +26,7 @@ function RoomsList({ rooms, setRooms }) {
         </div>
       </div>
       {/* rooms list */}
-      <div className="overflow-auto max-h-[45vh] w-full ">
+      <div className="overflow-auto h-[45vh] w-full ">
         <table className="w-full">
           <thead className="mb-3">
             <tr>

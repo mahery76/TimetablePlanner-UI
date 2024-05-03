@@ -26,7 +26,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
       </div>
 
        {/* core_class_refs's list */}
-       <div className="overflow-auto max-h-[45vh] w-full">
+       <div className="overflow-auto h-[45vh] w-full">
         <table className="flex flex-col w-full">
           <thead className="mb-3">
             <tr>

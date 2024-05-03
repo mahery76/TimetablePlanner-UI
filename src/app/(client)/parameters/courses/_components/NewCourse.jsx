@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Modal from "./Modal";
-// import { addCourse } from "../_api/courseApi";
 import { addCourse } from "@/parameters/courses/_api/courseApi";
 function NewCourse({ majors }) {
   const [isNewCourse, setIsNewCourse] = useState(false);
@@ -37,6 +36,8 @@ function NewCourse({ majors }) {
             placeholder="unité d'enseignement"
             required
           />
+         <label htmlFor="major_id" className="text-darkGray text-sm">Département</label>
+
           <select
             name="major_id"
             id=""

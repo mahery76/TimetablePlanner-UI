@@ -48,6 +48,6 @@ export const addCourse = (newCourse) => {
         console.log("new courses added")
     })
     .catch((error) => {
-        alert("Echec pour l'ajout de nouvelle unité d'enseignement")
+        console.log("Echec pour l'ajout de nouvelle unité d'enseignement", error)
     })
 }
