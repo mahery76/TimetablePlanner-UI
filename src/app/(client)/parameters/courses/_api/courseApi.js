@@ -1,25 +1,5 @@
 import { db } from "@/_lib/indexedDb";
-import { innerJoin } from "@/_lib/query";
 export const getAllCourses = async (setCourses) => {
-    // let courses = []
-    // let majors = []
-    // db.courses.toArray().then((data) => {
-    //     courses = [...data]
-    //     db.majors.toArray().then(data => {
-    //         majors = [...data]
-    //         const coursesColums = ["course_id", "course_name"]
-    //         const majorsColumns = ["major_name", "major_id"];
-    //         const combinedCourses = innerJoin(
-    //             courses,
-    //             majors,
-    //             "major_id",
-    //             "major_id",
-    //             coursesColums,
-    //             majorsColumns,
-    //         );
-    //         setCourses(combinedCourses)
-    //     })
-    // })
     const courses = await db.courses.toArray();
     const majors = await db.majors.toArray();
     let combinedCourses = []
