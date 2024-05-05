@@ -2,7 +2,7 @@ import { db } from "@/_lib/indexedDb";
 import { innerJoin } from "@/_lib/query";
 
 
-export const getAllGroups = (setGroups) => {
+export const getAllGroups = async (setGroups) => {
   // let groups = [];
   // let majors = [];
   // db.groups.toArray().then((data) => {
@@ -22,7 +22,22 @@ export const getAllGroups = (setGroups) => {
   //     setGroups(combinedGroups);
   //   });
   // });
-  
+  const groups = await db.groups.toArray();
+  const majors = await db.majors.toArray();
+  let combinedGroups = []
+  groups.forEach(group => {
+      let matchedMajors = majors.find(major => {
+          return major.major_id === group.major_id
+      })
+      let combinedGroup = {
+          group_id: group.group_id,
+          group_size: group.group_size,
+          group_name: group.group_name,
+          ...matchedMajors,
+      }
+      combinedGroups.push(combinedGroup)
+  });
+  setGroups(combinedGroups)
 };
 
 export const addGroup = (newGroup, router) => {
