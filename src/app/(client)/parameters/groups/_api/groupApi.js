@@ -3,25 +3,26 @@ import { innerJoin } from "@/_lib/query";
 
 
 export const getAllGroups = (setGroups) => {
-  let groups = [];
-  let majors = [];
-  db.groups.toArray().then((data) => {
-    groups = [...data];
-    db.majors.toArray().then((data) => {
-      majors = [...data];
-      const groupscolumns = ["group_id", "group_name", "group_size"];
-      const majorsColumns = ["major_name", "major_id"];
-      const combinedGroups = innerJoin(
-        groups,
-        majors,
-        "major_id",
-        "major_id",
-        groupscolumns,
-        majorsColumns
-      );
-      setGroups(combinedGroups);
-    });
-  });
+  // let groups = [];
+  // let majors = [];
+  // db.groups.toArray().then((data) => {
+  //   groups = [...data];
+  //   db.majors.toArray().then((data) => {
+  //     majors = [...data];
+  //     const groupscolumns = ["group_id", "group_name", "group_size"];
+  //     const majorsColumns = ["major_name", "major_id"];
+  //     const combinedGroups = innerJoin(
+  //       groups,
+  //       majors,
+  //       "major_id",
+  //       "major_id",
+  //       groupscolumns,
+  //       majorsColumns
+  //     );
+  //     setGroups(combinedGroups);
+  //   });
+  // });
+  
 };
 
 export const addGroup = (newGroup, router) => {
