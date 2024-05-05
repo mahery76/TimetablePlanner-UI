@@ -17,7 +17,7 @@ module.exports = {
       },
       colors: {
         "my-white": "rgb(255,255,255)",
-        "blue-body": "#eff6ff",
+        "blue-body": "#f6faff",
         "blue-body-secondary": "#e0eeff",
         "blue-primary": "cyan-600",
         "blue-secondary": "rgb(3, 113, 187)",

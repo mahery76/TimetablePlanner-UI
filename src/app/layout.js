@@ -37,9 +37,9 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-blue-50 font-roboto text-base">
+      <body className="bg-blue-body font-roboto text-base">
         {/* header */}
-        <div className="flex px-4 h-16 justify-between items-center">
+        <div className="bg-my-white flex px-4 h-16 justify-between items-center">
           <div className="flex">
             <div className="text-xl text-cyan-600 font-bold">
               Gérer emplois du temps

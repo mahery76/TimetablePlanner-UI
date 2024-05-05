@@ -1,4 +1,24 @@
 import { db } from "@/_lib/indexedDb";
+export const addActivity = (newActivityForm) => {
+  let newActivity = {
+    activity_hours: Number(newActivityForm["activity_hours"]),
+    activity_remaining_hours: Number(newActivityForm["activity_hours"]),
+    course_id: Number(newActivityForm["course_id"]),
+    teacher_id: Number(newActivityForm["teacher_id"]),
+    group_id: Number(newActivityForm["group_id"]),
+    room_id: Number(newActivityForm["room_id"]),
+    core_class_ref_id: Number(newActivityForm["core_class_ref_id"]),
+  };
+  db.activities
+  .add(newActivity)
+  .then(() => {
+    console.log("new activity added")
+  })
+  .catch(error => {
+    console.log("Echec pour l'ajout de nouvelle activité", error)
+  }) 
+};
+
 export const getAllActivities = async (setActivities) => {
   const activities = await db.activities.toArray();
   const courses = await db.courses.toArray();
@@ -16,7 +36,7 @@ export const getAllActivities = async (setActivities) => {
       return teacher.teacher_id === activity.teacher_id;
     });
     let matchedGroups = groups.find((group) => {
-        return groups.group_id === activity.group_id
+        return group.group_id === activity.group_id
     })
     let matchedRooms = rooms.find((room) => {
         return room.room_id === activity.room_id
@@ -25,6 +45,7 @@ export const getAllActivities = async (setActivities) => {
         return coreClass.core_class_ref_id === activity.core_class_ref_id
     })
     let activityResult = {
+      activity_id: activity.activity_id,
       activity_hours:   activity.activity_hours,
       activity_remaining_hours: activity.activity_remaining_hours,
       ...matchedCourse,
@@ -37,3 +58,20 @@ export const getAllActivities = async (setActivities) => {
   });
   setActivities(activitiesResults)
 };
+
+export const deleteActivity = (activity_id, activities, setActivities) => {
+    const confirmed = window.confirm("Voulez-vous supprimer cette activité")
+    if(confirmed){
+        db.activities
+        .delete(activity_id)
+        .then(() => {
+            console.log("activity deleted successfully")
+            setActivities(activities.filter(activity => (activity.activity_id !== activity_id)))
+        })
+        .catch((error) => {
+            console.error("Error deleting activity:", error)
+        })
+    }
+
+}
+

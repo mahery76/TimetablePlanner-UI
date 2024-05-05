@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Modal from "./Modal";
-import {addActivity} from "@/activities/_api/addActivity"
+import {addActivity} from "@/activities/_api/activityApi"
 
 function SelectElement ({dataList, dataId, dataDisplay, dataLabel}){
   return (

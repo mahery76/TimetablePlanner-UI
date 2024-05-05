@@ -25,10 +25,10 @@ export const deleteTeacher = (teacher_id, setTeachers, teachers) => {
       .delete(teacher_id)
       .then(() => {
         console.log(`Enseignant supprimé avec succés`);
+        setTeachers(teachers.filter(teacher => teacher.teacher_id !== teacher_id))
       })
       .catch((error) => {
         console.error("Error deleting teacher:", error);
       });
-      setTeachers(teachers.filter(teacher => teacher.teacher_id !== teacher_id))
   }
 };

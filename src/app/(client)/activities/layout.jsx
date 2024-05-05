@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import NewActivity from "./_components/NewActivity";
 import ActivitiesList from "./_components/ActivitiesList";
 import { db } from "@/_lib/indexedDb";
-import { getAllActivities } from "./_api/getAllActivities";
+import { getAllActivities } from "./_api/activityApi";
 
 function layout({ children }) {
   const [activities, setActivities] = useState([]);
@@ -21,20 +21,22 @@ function layout({ children }) {
     db.core_class_refs.toArray().then(setCore_class_refs);
   }, []);
   return (
-    <div>
-      <div className="mt-6">
-        <ActivitiesList activities={activities} setActivities={setActivities} />
+    <div className="w-full sm:flex justify-center px-8">
+      <div>
+        <div className="mt-6">
+          <ActivitiesList activities={activities} setActivities={setActivities} />
+        </div>
+        <div className="mt-8">
+          <NewActivity
+            courses={courses}
+            teachers={teachers}
+            groups={groups}
+            rooms={rooms}
+            core_class_refs={core_class_refs}
+          />
+        </div>
+        <div>{children}</div>
       </div>
-      <div className="mt-8">
-        <NewActivity
-          courses={courses}
-          teachers={teachers}
-          groups={groups}
-          rooms={rooms}
-          core_class_refs={core_class_refs}
-        />
-      </div>
-      <div>{children}</div>
     </div>
   );
 }

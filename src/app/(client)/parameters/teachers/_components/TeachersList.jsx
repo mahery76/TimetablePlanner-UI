@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TiDeleteOutline } from "react-icons/ti";
 import Link from "next/link";
 import { deleteTeacher } from "@/parameters/teachers/_api/teacherApi";
@@ -26,6 +26,7 @@ function TeachersList({ teachers, setTeachers }) {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+
       </div>
 
     {/* teachers's list */}
