@@ -25,7 +25,7 @@ export const getAllGroups = async (setGroups) => {
   const groups = await db.groups.toArray();
   const majors = await db.majors.toArray();
   let combinedGroups = []
-  groups.forEach(group => {
+   groups.forEach(group => {
       let matchedMajors = majors.find(major => {
           return major.major_id === group.major_id
       })
