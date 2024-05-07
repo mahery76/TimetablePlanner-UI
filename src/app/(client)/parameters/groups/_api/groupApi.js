@@ -1,4 +1,12 @@
 import { db } from "@/_lib/indexedDb";
+
+export const getGroupsDb = async () => {
+  const groups = await db.groups.toArray()
+  console.log(groups)
+  return groups
+}
+
+//rename to getGroupsWithMajors
 export const getAllGroups = async (setGroups) => {
   const groups = await db.groups.toArray();
   const majors = await db.majors.toArray();

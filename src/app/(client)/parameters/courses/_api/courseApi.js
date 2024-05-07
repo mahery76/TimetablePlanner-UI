@@ -1,6 +1,9 @@
 import { db } from "@/_lib/indexedDb";
+export const getAllCoursesDb = async () => {
+    return await db.courses.toArray()
+}
 export const getAllCourses = async (setCourses) => {
-    const courses = await db.courses.toArray();
+    const courses = await getAllCoursesDb();
     const majors = await db.majors.toArray();
     let combinedCourses = []
     courses.forEach(course => {

@@ -6,7 +6,6 @@ import { getAllGroups } from "./_api/groupApi";
 import GroupsList from "./_components/GroupsList";
 import NewGroup from './_components/NewGroup'
 
-
 function groups() {
   const [groups, setGroups] = useState([]);
   const [majors, setMajors] = useState([])
