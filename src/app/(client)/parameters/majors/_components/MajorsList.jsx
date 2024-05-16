@@ -22,6 +22,7 @@ function MajorsList({ majors, setMajors }) {
           />
         </div>
       </div>
+      
       {/* majors's list */}
       <div className="overflow-auto h-[45vh] w-full">
         <table className="flex flex-col w-full">
