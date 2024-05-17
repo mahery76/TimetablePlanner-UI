@@ -30,7 +30,7 @@ module.exports = {
         "violet-primary": "rgb(220, 214, 255)",
         "violet-secondary": "rgb(160, 139, 255)",
         "gray":"rgb(180, 180, 180)",
-        "lightGray": "rgb(230, 230, 230)",
+        "lightGray": "#eaeaea",
         "darkGray": "rgb(100, 100, 100)"
       },
     },

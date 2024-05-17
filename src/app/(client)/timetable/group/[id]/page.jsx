@@ -6,7 +6,10 @@ function page() {
   const {id: group_id} = useParams()
   const group_name = searchParams.get("group_name")
   return (
-    <div>{group_id} {group_name}</div>
+    <div>
+      {group_id} {group_name}
+
+    </div>
   )
 }
 export default page

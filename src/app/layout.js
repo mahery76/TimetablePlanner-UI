@@ -27,7 +27,7 @@ const Menu = ({ title, icon, path }) => {
       flex  hover:text-green-secondary `}
     >
       <div className="hidden sm:block  p-2  ">{title}</div>
-      <div className=" sm:hidden text-2xl font-bold  hover:scale-110">
+      <div className="sm:hidden text-2xl font-bold  hover:scale-110">
         {icon}
       </div>
       <div>{isPathMatched(pathname, path)}</div>
@@ -36,8 +36,9 @@ const Menu = ({ title, icon, path }) => {
 };
 export default function RootLayout({ children }) {
   return (
+
     <html lang="en">
-      <body className="bg-blue-body font-roboto text-base">
+      <body className="font-roboto text-base">
         {/* header */}
         <div className="bg-my-white flex px-4 h-16 justify-between items-center">
           <div className="flex">

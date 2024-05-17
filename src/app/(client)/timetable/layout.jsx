@@ -28,12 +28,12 @@ const LinkItem = ({ linkPath, linkTitle }) => {
 
 export default function timetableLayout({ children }) {
   return (
-    <section>
-      <div className="flex gap-x-5 p-2 mt-2 justify-center">
+    <section className="" >
+      <div className="flex justify-end gap-x-5 p-2 my-2 mx-4 bg-my-white">
         <LinkItem linkPath="/timetable/group" linkTitle="Classe" />
         <LinkItem linkPath="/timetable/teacher" linkTitle="Enseignant" />
       </div>
-      {children}
+        {children}
     </section>
   );
 }
