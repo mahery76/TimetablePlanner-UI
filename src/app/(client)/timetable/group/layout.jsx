@@ -8,8 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 function layout({ children }) {
   const [groups, setGroups] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
-  const [isGroupListOpen, setIsGroupListOpen] = useState(true);
+  const [isGroupListOpen, setIsGroupListOpen] = useState(false);
 
   const filteredGroups = groups.filter((group) =>
     group.group_name.toLowerCase().includes(searchTerm.toLowerCase())
