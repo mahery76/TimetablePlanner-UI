@@ -21,13 +21,13 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="px-4 ">
+    <div className="absolute flex w-full px-4 mt-6 justify-between">
       {/* side menus */}
 
       <div
-        className="-mt-[3.5rem] p-3 h-[2.7rem] w-[2.7rem]
-        flex justify-center items-center
-          bg-lightGray rounded-md flex hover:bg-gradient-to-r from-cyan-400 to-green-primary cursor-pointer
+        className="p-3 h-[3rem]
+        flex justify-center items-center 
+          bg-lightGray rounded-full px-4 flex hover:bg-gradient-to-r from-cyan-400 to-green-primary cursor-pointer
         "
         onClick={() => setIsGroupListOpen(() => true)}
       >

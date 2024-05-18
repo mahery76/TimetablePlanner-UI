@@ -14,47 +14,52 @@ function page() {
   return (
     <div>
       {/* date navigation and buttons */}
-      <div className="overflow-auto flex md:justify-center">
-        <div className="flex min-w-[50rem] max-w-[50rem] md:items-center md:justify-evenly gap-8 py-6 pr-4  bg-white mx-4 mt-4">
+      <div className="flex md:justify-center overflow-auto">
+        <div className="flex items-center justify-evenly gap-4 md:gap-8 pr-4  bg-white mx-4">
+
           {/* Generate */}
           <div
             className="h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full px-4   cursor-pointer hover:bg-blue-300"
             title="generer"
           >
             <BsStars />
-            Génerer
+            <div className="hidden md:block ">Génerer</div>
           </div>
+
           {/* Refresh */}
           <div
             className="h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full px-4   cursor-pointer hover:bg-blue-300"
             title="Actualiser"
           >
-             <MdOutlineRefresh />
-            Actualiser
+            <MdOutlineRefresh />
+            <div className="hidden md:block ">Actualiser</div>
           </div>
+
           {/* timetable info */}
           <div>
-            {group_id} {group_name}
+            {group_name}
           </div>
+
           {/* Mark */}
           <div
             className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
           >
-              <FaMarker />
-            Marquer
+            <FaMarker />
+            <div className="hidden md:block ">Marquer</div>
           </div>
+
           {/* Clear */}
           <div
             className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
           >
-              <AiOutlineClear />
-            Effacer
+            <AiOutlineClear />
+            <div className="hidden md:block ">Effacer</div>
           </div>
         </div>
       </div>
 
       {/* timetable section*/}
-      <div className="flex">
+      <div className="flex m-4">
         <div>creneaux</div>
         <div>Lun</div>
         <div>Mar</div>
@@ -63,7 +68,6 @@ function page() {
         <div>Ven</div>
         <div>Sam</div>
       </div>
-      <div>timetable</div>
     </div>
   );
 }
