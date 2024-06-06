@@ -21,19 +21,17 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="absolute flex w-full px-4 mt-6 justify-between">
+    <div className="md:m-4 flex flex-col sm:flex-row w-full px-4 justify-center">
       {/* side menus */}
-
       <div
         className="p-3 h-[3rem]
-        flex justify-center items-center 
-          bg-lightGray rounded-full px-4 flex hover:bg-gradient-to-r from-cyan-400 to-green-primary cursor-pointer
-        "
+          flex justify-center items-center
+            bg-lightGray rounded-full px-4 hover:bg-gradient-to-r from-cyan-400 to-green-primary cursor-pointer
+          "
         onClick={() => setIsGroupListOpen(() => true)}
       >
         <RxHamburgerMenu />
       </div>
-
       <Modal
         isOpen={isGroupListOpen}
         onClose={() => setIsGroupListOpen(() => false)}
@@ -52,7 +50,6 @@ function layout({ children }) {
               />
             </div>
           </div>
-
           <div className="overflow-auto h-[45vh] w-full">
             <table className="flex flex-col w-full">
               <tbody>
@@ -78,7 +75,6 @@ function layout({ children }) {
           </div>
         </div>
       </Modal>
-
       {/* timetable of one group */}
       <div className="">
         <div>{children}</div>

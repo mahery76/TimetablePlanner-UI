@@ -1,12 +1,7 @@
 import { db } from "@/_lib/indexedDb";
 
-export const allCore_class_refs_db = async () => {
-  return await db.core_class_refs.toArray();
-};
-
 export const getAllcore_class_refs = async (setCore_class_refs) => {
-  const Allcore_class_refs = await allCore_class_refs_db()
-  setCore_class_refs(Allcore_class_refs)
+  db.core_class_refs.toArray().then(setCore_class_refs)
 };
 
 export const addCore_class_ref = (

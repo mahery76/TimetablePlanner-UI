@@ -2,7 +2,6 @@ import { db } from "@/_lib/indexedDb";
 
 export const getGroupsDb = async () => {
   const groups = await db.groups.toArray()
-  console.log(groups)
   return groups
 }
 

@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { db } from "@/_lib/indexedDb";
 import { useRouter } from "next/navigation";
 import { getAllGroups } from "./_api/groupApi";
 import GroupsList from "./_components/GroupsList";
 import NewGroup from './_components/NewGroup'
+import { getAllMajors } from "../majors/_api/majorsApi";
 
 function groups() {
   const [groups, setGroups] = useState([]);
@@ -13,7 +13,7 @@ function groups() {
 
   useEffect(() => {
     getAllGroups(setGroups);
-    db.majors.toArray().then(setMajors)
+    getAllMajors(setMajors)
   }, []);
   return (
     <div>

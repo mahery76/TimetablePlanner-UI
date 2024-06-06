@@ -21,10 +21,10 @@ const Menu = ({ title, icon, path }) => {
       href={path}
       className={`${
         isPathMatched(pathname, path)
-          ? "text-green-secondary"
+          ? "bg-green-primary"
           : ""
       }
-      flex  hover:text-green-secondary `}
+      flex rounded-md hover:bg-green-primary`}
     >
       <div className="hidden sm:block  p-2  ">{title}</div>
       <div className="sm:hidden text-2xl font-bold  hover:scale-110">
@@ -40,10 +40,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="font-roboto text-base">
         {/* header */}
-        <div className="bg-my-white flex px-4 h-16 justify-between items-center">
+        <div className="bg-my-white flex mx-4 md:mx-8 h-16 justify-between items-center">
           <div className="flex">
             <div className="text-xl text-cyan-600 font-bold">
-              Gérer emplois du temps
+              Emplois du temps
             </div>
           </div>
           <div className="flex gap-4 justify-center items-center ">

@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { db } from "@/_lib/indexedDb";
 import { useRouter } from "next/navigation";
 import {getAllCourses} from "./_api/courseApi"
 import CoursesList from "./_components/CoursesList"
 import NewCourse from "./_components/NewCourse"
+import { getAllMajors } from "../majors/_api/majorsApi";
 
 function courses() {
   const [courses, setCourses] = useState([])
@@ -12,7 +12,7 @@ function courses() {
   const router = useRouter()
   useEffect(() => {
     getAllCourses(setCourses)
-    db.majors.toArray().then(setMajors)
+    getAllMajors(setMajors)
   },[])
   return (
     <div>

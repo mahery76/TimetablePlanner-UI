@@ -1,12 +1,13 @@
 import { db } from "@/_lib/indexedDb";
 import NewRoom from "../_components/NewRoom";
+
 export const getAllRooms = (setRooms) => {
   db.rooms.toArray().then(setRooms);
 };
 
 export const deleteRoom = (room_id, setRooms, rooms) => {
     const confirmed = window.confirm("Voulez-vous supprimer cette salle")
-    if(confirm){
+    if(confirmed){
         db.rooms
         .delete(room_id)
         .then(() => {

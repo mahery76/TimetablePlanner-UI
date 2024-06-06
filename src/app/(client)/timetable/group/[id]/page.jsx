@@ -14,16 +14,16 @@ function page() {
   return (
     <div>
       {/* date navigation and buttons */}
-      <div className="flex md:justify-center overflow-auto">
-        <div className="flex items-center justify-evenly gap-4 md:gap-8 pr-4  bg-white mx-4">
+      <div className="flex  md:justify-center overflow-auto">
+        <div className="w-full flex flex-col md:flex-row items-center justify-evenly gap-4 md:gap-8  bg-white">
 
           {/* Generate */}
           <div
-            className="h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full px-4   cursor-pointer hover:bg-blue-300"
+            className=" w-full h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full cursor-pointer hover:bg-blue-300"
             title="generer"
           >
             <BsStars />
-            <div className="hidden md:block ">Génerer</div>
+            <div className="">Génerer</div>
           </div>
 
           {/* Refresh */}
@@ -32,11 +32,11 @@ function page() {
             title="Actualiser"
           >
             <MdOutlineRefresh />
-            <div className="hidden md:block ">Actualiser</div>
+            <div className="">Actualiser</div>
           </div>
 
           {/* timetable info */}
-          <div>
+          <div className="order-[-1] md:order-[-3]">
             {group_name}
           </div>
 
@@ -45,7 +45,7 @@ function page() {
             className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
           >
             <FaMarker />
-            <div className="hidden md:block ">Marquer</div>
+            <div className="">Marquer</div>
           </div>
 
           {/* Clear */}
@@ -53,8 +53,9 @@ function page() {
             className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
           >
             <AiOutlineClear />
-            <div className="hidden md:block ">Effacer</div>
+            <div className="">Effacer</div>
           </div>
+
         </div>
       </div>
 

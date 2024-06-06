@@ -17,8 +17,8 @@ const LinkItem = ({ linkPath, linkTitle }) => {
           ? "bg-gradient-to-r from-cyan-400 to-green-primary"
           : ""
       } 
-      hover:bg-gradient-to-r from-cyan-400 to-green-primary
-      rounded-full px-4 flex items-center justify-center p-2 whitespace-nowrap
+      w-1/2 hover:bg-gradient-to-r from-cyan-400 to-green-primary md:max-w-[6rem] 
+      rounded-md flex items-center justify-center p-2 whitespace-nowrap
       `}
     >
       {linkTitle}
@@ -28,10 +28,10 @@ const LinkItem = ({ linkPath, linkTitle }) => {
 
 export default function timetableLayout({ children }) {
   return (
-    <section className="flex" >
-      <div className="h-[80vh] flex flex-col justify-center ml-4 gap-4">
-        <LinkItem linkPath="/timetable/group" linkTitle="C" />
-        <LinkItem linkPath="/timetable/teacher" linkTitle="E" />
+    <section className="flex flex-col h-[85vh]" >
+      <div className=" flex justify-center md:justify-end m-4 gap-8 md:mx-8">
+        <LinkItem linkPath="/timetable/group" linkTitle="Classe" />
+        <LinkItem linkPath="/timetable/teacher" linkTitle="Enseignant" />
       </div>
         {children}
     </section>
