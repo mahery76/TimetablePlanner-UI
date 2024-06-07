@@ -31,17 +31,17 @@ function GroupsList({ groups, setGroups }) {
           <thead className="mb-3">
             <tr>
               {/* for the delete button column */}
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50">Classe</th>
-              <th className="px-4 sticky top-0 bg-blue-50">Effectif</th>
-              <th className="px-4 sticky top-0 bg-blue-50">Département</th>
+              <th className="px-4 sticky top-0 "></th>
+              <th className="px-4 sticky top-0 ">Classe</th>
+              <th className="px-4 sticky top-0 ">Effectif</th>
+              <th className="px-4 sticky top-0 ">Département</th>
             </tr>
           </thead>
           <tbody>
             {filteredGroups.map((group) => (
               <tr
                 key={group.group_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-3"

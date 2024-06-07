@@ -29,18 +29,18 @@ function CoursesList({ courses, setCourses }) {
         <table className="w-full">
           <thead className="mb-3">
             <tr>
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50">
+              <th className="px-4 sticky top-0 "></th>
+              <th className="px-4 sticky top-0 ">
                 Unité d'enseignement
               </th>
-              <th className="px-4 sticky top-0 bg-blue-50">Département</th>
+              <th className="px-4 sticky top-0 ">Département</th>
             </tr>
           </thead>
           <tbody>
             {filteredCourses.map((course) => (
               <tr
                 key={course.course_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-3"

@@ -14,12 +14,12 @@ function page() {
   return (
     <div>
       {/* date navigation and buttons */}
-      <div className="flex  md:justify-center overflow-auto">
-        <div className="w-full flex flex-col md:flex-row items-center justify-evenly gap-4 md:gap-8  bg-white">
+      <div className="flex  md:justify-center ">
+        <div className="w-full flex items-center justify-evenly gap-4 md:gap-8  bg-white">
 
           {/* Generate */}
           <div
-            className=" w-full h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full cursor-pointer hover:bg-blue-300"
+            className=" w-full h-12 flex items-center justify-center  gap-2 bg-blue-200 rounded-full px-4 marker:cursor-pointer hover:bg-blue-300"
             title="generer"
           >
             <BsStars />
@@ -36,13 +36,13 @@ function page() {
           </div>
 
           {/* timetable info */}
-          <div className="order-[-1] md:order-[-3]">
+          <div className="">
             {group_name}
           </div>
 
           {/* Mark */}
           <div
-            className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
+            className="h-12 flex items-center justify-center gap-2 bg-blue-200 rounded-full px-4  cursor-pointer hover:bg-blue-300"
           >
             <FaMarker />
             <div className="">Marquer</div>
@@ -50,7 +50,7 @@ function page() {
 
           {/* Clear */}
           <div
-            className="h-12 flex items-center justify-center gap-2 bg-green-200 rounded-full px-4  cursor-pointer hover:bg-green-300"
+            className="h-12 flex items-center justify-center gap-2 bg-blue-200 rounded-full px-4  cursor-pointer hover:bg-blue-300"
           >
             <AiOutlineClear />
             <div className="">Effacer</div>

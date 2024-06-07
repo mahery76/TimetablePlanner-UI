@@ -34,16 +34,16 @@ function TeachersList({ teachers, setTeachers }) {
         <table className="w-full">
           <thead className="mb-3">
             <tr>
-              <th className="px-4 sticky top-0 bg-blue-50 ml-0"></th>
-              <th className="px-4 sticky top-0 bg-blue-50 ml-0">Nom</th>
-              <th className="px-4 sticky top-0 bg-blue-50 ml-0">Titre</th>
+              <th className="px-4 sticky top-0  ml-0"></th>
+              <th className="px-4 sticky top-0  ml-0">Nom</th>
+              <th className="px-4 sticky top-0  ml-0">Titre</th>
             </tr>
           </thead>
           <tbody>
             {filteredTeachers.map((teacher) => (
               <tr
                 key={teacher.teacher_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="odd:bg-neutral-100 "
               >
                 {/* delete column */}
                 <td

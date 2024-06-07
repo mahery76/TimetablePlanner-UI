@@ -21,10 +21,10 @@ const Menu = ({ title, icon, path }) => {
       href={path}
       className={`${
         isPathMatched(pathname, path)
-          ? "bg-green-primary"
+          ? "bg-green-200"
           : ""
       }
-      flex rounded-md hover:bg-green-primary`}
+      flex rounded-md hover:bg-green-200`}
     >
       <div className="hidden sm:block  p-2  ">{title}</div>
       <div className="sm:hidden text-2xl font-bold  hover:scale-110">
@@ -38,11 +38,11 @@ export default function RootLayout({ children }) {
   return (
 
     <html lang="en">
-      <body className="font-roboto text-base">
+      <body className="font-roboto text-sm">
         {/* header */}
-        <div className="bg-my-white flex mx-4 md:mx-8 h-16 justify-between items-center">
+        <div className="shadow-md flex px-4 md:px-8 h-16 justify-between items-center">
           <div className="flex">
-            <div className="text-xl text-cyan-600 font-bold">
+            <div className="text-xl text-darkGray font-bold">
               Emplois du temps
             </div>
           </div>
@@ -55,8 +55,6 @@ export default function RootLayout({ children }) {
             <Menu title="Activités" path="/activities" icon={<CiBoxList />} />
             <Menu title="Paramètres" path="/parameters" icon={<CiSettings />} />
           </div>
-        </div>
-        <div className="flex h-0.5 bg-gradient-to-r from-blue-secondary to-green-secondary opacity-50">
         </div>
         {/* main */}
         <main>{children}</main>

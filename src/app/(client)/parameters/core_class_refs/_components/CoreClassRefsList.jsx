@@ -30,15 +30,15 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
         <table className="flex flex-col w-full">
           <thead className="mb-3">
             <tr>
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50 mx-auto w-full">Références des Activités en Tronc commun</th>
+              <th className="px-4 sticky top-0 "></th>
+              <th className="px-4 sticky top-0 mx-auto w-full">Références des Activités en Tronc commun</th>
             </tr>
           </thead>
           <tbody>
             {filteredCore_class_ref.map((core_class_ref) => (
               <tr
                 key={core_class_ref.core_class_ref_id}
-                className="flex w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="flex w-full odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-3 my-auto"

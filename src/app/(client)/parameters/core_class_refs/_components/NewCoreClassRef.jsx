@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { addCore_class_ref } from "../_api/core_class_refsApi";
+import AddButton from "@/parameters/_components/AddButton";
 
 function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
   const [isNew_Core_class_ref, setIsNew_Core_class_ref] = useState(false);
@@ -20,15 +21,10 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
   };
   return (
     <div className="flex justify-center items-center">
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-  bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNew_Core_class_ref(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter référence
-        </span>
-      </button>
+      <AddButton
+        title="Ajouter référence"
+        handleAdd={() => setIsNew_Core_class_ref(() => true)}
+      />
 
       <Modal
         isOpen={isNew_Core_class_ref}
@@ -50,8 +46,8 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
           <input
             type="submit"
             className=" 
-      bg-gradient-to-br from-green-primary to-blue-secondary 
-      py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
+      bg-gradient-to-br from-green-200 to-blue-200 
+      py-1.5 rounded-lg cursor-pointer flex w-full justify-center
       "
             value="Ajouter"
           />
@@ -62,3 +58,5 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
 }
 
 export default NewCoreClassRef;
+
+

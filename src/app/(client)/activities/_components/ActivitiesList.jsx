@@ -33,21 +33,21 @@ function ActivitiesList({ activities, setActivities }) {
         <table className="w-full">
           <thead className="mb-3 bg-my-white">
             <tr>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0"></th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0" >Classe</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0" >UE</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0">Enseignant</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0">Salle</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0">Réf TC</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0">VH</th>
-              <th className="whitespace-nowrap px-4 sticky top-0 bg-blue-50 ml-0">VH restantes</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0"></th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0" >Classe</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0" >UE</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0">Enseignant</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0">Salle</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0">Réf TC</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0">VH</th>
+              <th className="whitespace-nowrap px-4 sticky top-0  ml-0">VH restantes</th>
             </tr>
           </thead>
           <tbody>
             {filteredActivities.map((activity) => (
               <tr
                 key={activity.activity_id}
-                className="odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className="odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-3"

@@ -14,10 +14,10 @@ const LinkItem = ({ linkPath, linkTitle }) => {
       className={`
       ${
         isPathMatched(pathname, linkPath)
-          ? "bg-gradient-to-r from-cyan-400 to-green-primary"
+          ? "bg-green-200"
           : ""
       } 
-      w-1/2 hover:bg-gradient-to-r from-cyan-400 to-green-primary md:max-w-[6rem] 
+      w-1/2 hover:hover:bg-green-200 shadow-md md:max-w-[6rem] 
       rounded-md flex items-center justify-center p-2 whitespace-nowrap
       `}
     >

@@ -32,15 +32,15 @@ function TimeslotsList({ timeslots, setTimeslots }) {
           <thead className="mb-3">
             <tr>
               {/* for the delete button column */}
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50  mx-auto w-full">Créneaux</th>
+              <th className="px-4 sticky top-0 "></th>
+              <th className="px-4 sticky top-0   mx-auto w-full">Créneaux</th>
             </tr>
           </thead>
           <tbody>
             {filteredTimeslots.map((timeslot) => (
               <tr
                 key={timeslot.timeslot_id}
-                className=" flex w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className=" flex w-full odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-2 my-auto"

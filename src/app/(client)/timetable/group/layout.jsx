@@ -21,13 +21,10 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="md:m-4 flex flex-col sm:flex-row w-full px-4 justify-center">
+    <div className="md:mx-4 gap-2 flex w-full md:justify-center overflow-auto">
       {/* side menus */}
       <div
-        className="p-3 h-[3rem]
-          flex justify-center items-center
-            bg-lightGray rounded-full px-4 hover:bg-gradient-to-r from-cyan-400 to-green-primary cursor-pointer
-          "
+        className=" p-3 h-[3rem] flex justify-center items-center bg-lightGray rounded-full px-4 hover:blue-400 cursor-pointer"
         onClick={() => setIsGroupListOpen(() => true)}
       >
         <RxHamburgerMenu />
@@ -39,6 +36,7 @@ function layout({ children }) {
         <h2 className="font-bold text-center text-cyan-600 my-4">
           Choisir une classe
         </h2>
+
         <div className=" flex w-full flex-col sm:items-center sm:w-[20rem] bg-my-white">
           <div className="flex my-2 w-full items-center mb-4">
             <div className="w-full  flex items-center">
@@ -55,7 +53,7 @@ function layout({ children }) {
               <tbody>
                 {filteredGroups.map((group) => (
                   <tr
-                    className="flex cursor-pointer w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                    className="flex cursor-pointer w-full odd:bg-neutral-100 "
                     key={group.group_id}
                     onClick={() => setIsGroupListOpen(() => false)}
                   >
@@ -76,9 +74,7 @@ function layout({ children }) {
         </div>
       </Modal>
       {/* timetable of one group */}
-      <div className="">
-        <div>{children}</div>
-      </div>
+      <div>{children}</div>
     </div>
   );
 }

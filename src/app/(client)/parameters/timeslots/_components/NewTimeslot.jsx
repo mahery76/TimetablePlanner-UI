@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { addTimeslot } from "@/parameters/timeslots/_api/timeslotsApi";
+import AddButton from "@/parameters/_components/AddButton";
 
 function NewTimeslot({ timeslots, setTimeslots }) {
   const [isNewTimeslot, setIsNewTimeslot] = useState(false);
   
-
   const addNewTimeslot = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -15,17 +15,13 @@ function NewTimeslot({ timeslots, setTimeslots }) {
     data.forEach((value, key) => (object[key] = value));
     addTimeslot(object, setIsNewTimeslot, timeslots, setTimeslots);
   };
+
   return (
     <div className="flex justify-center items-center">
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-                    bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewTimeslot(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter créneaux
-        </span>
-      </button>
+     <AddButton
+        title="Ajouter créneaux"
+        handleAdd={() => setIsNewTimeslot(() => true)}
+      />
 
       <Modal
         isOpen={isNewTimeslot}

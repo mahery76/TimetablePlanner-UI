@@ -23,7 +23,7 @@ module.exports = {
         "blue-secondary": "rgb(3, 113, 187)",
         "red-primary": "rgb(230, 125, 125)",
         "red-secondary": "rgb(230, 125, 125)",
-        "green-primary": "rgb(143 255 143)",
+        "green-primary": "green-200",
         "green-secondary": "rgb(3, 184, 57)",
         "yellow-primary": "rgb(255, 248, 150)",
         "yellow-secondary": "rgb(255, 248, 150)",

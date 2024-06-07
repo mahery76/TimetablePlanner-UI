@@ -29,15 +29,15 @@ function MajorsList({ majors, setMajors }) {
           <thead className="mb-3">
             <tr>
               {/* for the delete button column */}
-              <th className="px-4 sticky top-0 bg-blue-50"></th>
-              <th className="px-4 sticky top-0 bg-blue-50 mx-auto w-full">Nom</th>
+              <th className="px-4 sticky top-0 "></th>
+              <th className="px-4 sticky top-0  mx-auto w-full">Nom</th>
             </tr>
           </thead>
           <tbody>
             {filteredMajors.map((major) => (
               <tr
                 key={major.major_id}
-                className=" flex w-full odd:bg-blue-body even:bg-blue-body-secondary hover:opacity-50"
+                className=" flex w-full odd:bg-neutral-100 "
               >
                 <td
                   className="whitespace-nowrap px-2 py-2 my-auto"
