@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addGroup } from "@/api/groupApi";
 import { useRouter } from "next/navigation";
+import AddButton from "@/components/AddButton";
+
 function NewGroup({ majors }) {
   const [isNewGroup, setIsNewGroup] = useState(false);
   const router = useRouter();
@@ -18,15 +20,12 @@ function NewGroup({ majors }) {
 
   return (
     <div className="flex justify-center items-center">
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-                    bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewGroup(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter classe
-        </span>
-      </button>
+
+      <AddButton
+        title="Ajouter classe"
+        handleAdd={() => setIsNewGroup(() => true)}
+      />
+      
       <Modal isOpen={isNewGroup} onClose={() => setIsNewGroup(() => false)}>
         <h2 className="font-bold text-center text-cyan-600 my-4">
           Nouvelle Classe

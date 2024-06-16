@@ -12,7 +12,7 @@ const LinkItem = ({ linkPath, linkTitle }) => {
     <Link
       href={linkPath}
       className={`
-      ${isPathMatched(pathname, linkPath) ? "bg-green-200" : ""} 
+      ${isPathMatched(pathname, linkPath) ? "bg-green-200 border-2 border-green-500" : ""} 
       hover:hover:bg-green-200 shadow-md
       rounded-md flex items-center justify-center p-2 whitespace-nowrap
       `}

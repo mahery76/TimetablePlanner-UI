@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addTimeslot } from "@/api/timeslotsApi";
-import AddButton from "@/parameters/_components/AddButton";
+import AddButton from "@/components/AddButton";
 
 function NewTimeslot({ timeslots, setTimeslots }) {
   const [isNewTimeslot, setIsNewTimeslot] = useState(false);
-  
+
   const addNewTimeslot = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,7 +18,7 @@ function NewTimeslot({ timeslots, setTimeslots }) {
 
   return (
     <div className="flex justify-center items-center">
-     <AddButton
+      <AddButton
         title="Ajouter créneaux"
         handleAdd={() => setIsNewTimeslot(() => true)}
       />

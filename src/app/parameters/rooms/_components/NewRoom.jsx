@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addRoom } from "@/api/roomApi";
+import AddButton from "@/components/AddButton";
 
 function NewRoom({ rooms, setRooms }) {
   const [isNewRoom, setIsNewRoom] = useState(false);
@@ -16,15 +17,10 @@ function NewRoom({ rooms, setRooms }) {
 
   return (
     <div>
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-                    bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewRoom(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter salle
-        </span>
-      </button>
+      <AddButton
+        title="Ajouter salle"
+        handleAdd={() => setIsNewRoom(() => true)}
+      />
 
       <Modal isOpen={isNewRoom} onClose={() => setIsNewRoom(() => false)}>
         <h2 className="font-bold text-center text-cyan-600 my-4">

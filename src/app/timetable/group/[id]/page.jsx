@@ -12,7 +12,7 @@ function page() {
   const { id: group_id } = useParams();
   const group_name = searchParams.get("group_name");
   return (
-    <div>
+    <div >
       {/* date navigation and buttons */}
       <div className="flex  md:justify-center ">
         <div className="w-full flex items-center justify-evenly gap-4 md:gap-8  bg-white">

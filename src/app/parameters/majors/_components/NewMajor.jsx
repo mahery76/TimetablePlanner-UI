@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addMajor } from "@/api/majorsApi";
+import AddButton from "@/components/AddButton";
 
 function NewMajor({ majors, setMajors }) {
   const [isNewMajor, setIsNewMajor] = useState(false);
@@ -15,16 +16,10 @@ function NewMajor({ majors, setMajors }) {
   };
   return (
     <div>
-      <button
-        className="flex w-full items-center justify-center p-0.5 overflow-hidden
-        rounded-lg group bg-gradient-to-br from-green-primary to-blue-secondary
-        group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewMajor(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter département
-        </span>
-      </button>
+      <AddButton
+        title="Ajouter département"
+        handleAdd={() => setIsNewMajor(() => true)}
+      />
       <Modal
         isOpen={isNewMajor}
         onClose={() => setIsNewMajor(() => false)}

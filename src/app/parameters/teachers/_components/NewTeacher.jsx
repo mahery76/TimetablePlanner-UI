@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addTeacher } from "@/api/teacherApi";
+import AddButton from "@/components/AddButton";
+
 function NewTeacher({ teachers, setTeachers }) {
   const [isNewTeacher, setIsNewTeacher] = useState(false);
 
@@ -15,16 +17,10 @@ function NewTeacher({ teachers, setTeachers }) {
 
   return (
     <div className="flex justify-center items-center">
-
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-        bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewTeacher(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter enseignant
-        </span>
-      </button>
+      <AddButton
+        title="Ajouter enseignant"
+        handleAdd={() => setIsNewTeacher(() => true)}
+      />
 
       <Modal isOpen={isNewTeacher} onClose={() => setIsNewTeacher(() => false)}>
         <h2 className="font-bold text-center text-cyan-600 my-4">Nouveau Enseignant</h2>
