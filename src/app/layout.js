@@ -35,9 +35,10 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-roboto text-sm">
+      <body className="font-roboto text-sm flex flex-col ">
+
         {/* header */}
-        <div className="shadow-md flex px-4 md:px-8 h-16 items-center justify-center">
+        <div className="shadow-md w-full flex px-4 md:px-8 h-16 items-center justify-center">
           {/* <div className="flex justify-self-start">
             <div className="text-xl text-darkGray font-bold">
               Emplois du temps
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
             <Menu title="Paramètres" path="/parameters" icon={<CiSettings />} />
           </div>
         </div>
+
         {/* main */}
         <MenuProvider>
           <main>{children}</main>

@@ -14,7 +14,7 @@ function page() {
   return (
     <div >
       {/* date navigation and buttons */}
-      <div className="flex  md:justify-center ">
+      <div className="mt-4 flex  md:justify-center ">
         <div className="w-full flex items-center justify-evenly gap-4 md:gap-8  bg-white">
 
           {/* Generate */}

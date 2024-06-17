@@ -55,7 +55,7 @@ export default function timetableLayout({ children }) {
       <div
         className={` 
       ${isMenuOpen ? "" : "hidden"}
-      absolute w-[15rem] flex items-center justify-between ml-4 my-4 z-10 
+      absolute w-[18rem] flex items-center justify-between mx-4 my-4 z-10 
       `}
       >
         <div
