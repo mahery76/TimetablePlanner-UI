@@ -35,10 +35,10 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-roboto text-sm flex flex-col ">
+      <body className="font-roboto text-sm flex flex-col min-h-[100vh]">
 
         {/* header */}
-        <div className="shadow-md w-full flex px-4 md:px-8 h-16 items-center justify-center">
+        <div className="border-b-2 border-neutral-200 w-full flex px-4 md:px-8 h-16 items-center justify-center">
           {/* <div className="flex justify-self-start">
             <div className="text-xl text-darkGray font-bold">
               Emplois du temps
@@ -46,8 +46,13 @@ export default function RootLayout({ children }) {
           </div> */}
           <div className="flex gap-4 justify-center items-center ">
             <Menu
-              title="Emplois du temps"
-              path="/timetable"
+              title="Classes"
+              path="/timetable/group"
+              icon={<CiCalendar />}
+              />
+            <Menu
+              title="Profs"
+              path="/timetable/teacher"
               icon={<CiCalendar />}
             />
             <Menu title="Activités" path="/activities" icon={<CiBoxList />} />
@@ -57,7 +62,7 @@ export default function RootLayout({ children }) {
 
         {/* main */}
         <MenuProvider>
-          <main>{children}</main>
+          <div className="h-full flex w-full">{children}</div>
         </MenuProvider>
       </body>
     </html>

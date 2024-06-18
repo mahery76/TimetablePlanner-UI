@@ -3,9 +3,9 @@ import React, { useEffect, useState, useContext } from "react";
 import { getGroupsDb } from "@/api/groupApi";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
-import Modal from "@/components/Modal";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { IsSideMenuOpenContext } from "@/context/timetableSideMenuContext";
+import { CiMenuBurger } from "react-icons/ci";
+import { MdClose } from "react-icons/md";
 
 function layout({ children }) {
   const [groups, setGroups] = useState([]);
@@ -24,23 +24,48 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="absolute gap-2 flex">
+    <div className="gap-2 flex">
+      {/* isMenuClosed */}
+      <div
+        className={` 
+      ${isMenuOpen ? "hidden" : ""}
+      absolute w-[15rem] flex items-center justify-between ml-4 my-4 z-10 
+      `}
+      >
+        <div
+          className="p-3 cursor-pointer rounded-full bg-neutral-100 hover:bg-neutral-200"
+          onClick={() => setIsMenuOpen(() => true)}
+        >
+          <CiMenuBurger />
+        </div>
+      </div>
 
-      {/* side menus */}
+      {/* side menus open*/}
       <div
         className={`
         ${isMenuOpen ? "" : "hidden"}
-        w-[18.5rem] mt-16 ml-4 flex flex-col bg-my-white
+        w-[18.5rem] ml-4 flex flex-col bg-my-white 
         `}
       >
-        <div className="flex my-2 w-full items-center mb-4">
-          <div className="w-full  flex items-center">
-            <CiSearch className="text-darkGray absolute ml-3 size-6" />
-            <input
-              type="text"
-              className="bg-white w-full h-10 text-center rounded-md border-[1px] border-gray"
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+        <div className="flex gap-2">
+          {/* close menu button */}
+          <div
+            className="p-3 my-2 cursor-pointer rounded-full bg-neutral-100 hover:bg-neutral-200"
+            onClick={() => setIsMenuOpen(() => false)}
+          >
+            <MdClose />
+          </div>
+
+          {/* search teacher section */}
+          <div className="flex my-2 w-full items-center">
+            <div className="w-full  flex items-center">
+              <CiSearch className="text-darkGray absolute ml-3 size-6" />
+              <input
+                type="text"
+                className="bg-white w-full h-10 text-center rounded-md border-[1px] border-gray"
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
           </div>
         </div>
 
@@ -49,9 +74,9 @@ function layout({ children }) {
             <tbody>
               {filteredGroups.map((group) => (
                 <tr
-                  className="flex cursor-pointer w-full  border-b-2 border-neutral-300 hover:bg-neutral-100"
+                  className="flex cursor-pointer w-full  border-b-2 border-neutral-200 hover:bg-neutral-100"
                   key={group.group_id}
-                  onClick={() => setIsGroupListOpen(() => false)}
+                  onClick={() => setIsMenuOpen(() => false)}
                 >
                   <td className="w-full">
                     <Link
@@ -70,7 +95,14 @@ function layout({ children }) {
       </div>
 
       {/* timetable of one group */}
-      <div className="ml-[5rem]">{children}</div>
+      <div
+        className={`
+      ${isMenuOpen ? "hidden" : ""}
+      md:block ml-[5rem]
+      `}
+      >
+        {children}
+      </div>
     </div>
   );
 }
