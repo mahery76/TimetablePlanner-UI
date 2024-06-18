@@ -35,10 +35,10 @@ const Menu = ({ title, icon, path }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-roboto text-sm flex flex-col min-h-[100vh]">
+      <body className="font-roboto text-sm flex flex-col h-[100vh]">
 
         {/* header */}
-        <div className="border-b-2 border-neutral-200 w-full flex px-4 md:px-8 h-16 items-center justify-center">
+        <div className="h-[10vh] border-b-2 border-neutral-200 w-full flex px-4 md:px-8 items-center justify-center">
           {/* <div className="flex justify-self-start">
             <div className="text-xl text-darkGray font-bold">
               Emplois du temps
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 
         {/* main */}
         <MenuProvider>
-          <div className="h-full flex w-full">{children}</div>
+          <div className="h-[90vh] flex w-full">{children}</div>
         </MenuProvider>
       </body>
     </html>

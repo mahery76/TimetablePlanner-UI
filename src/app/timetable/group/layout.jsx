@@ -24,12 +24,12 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="gap-2 flex">
+    <div className="w-full h-full flex">
       {/* isMenuClosed */}
       <div
         className={` 
       ${isMenuOpen ? "hidden" : ""}
-      absolute w-[15rem] flex items-center justify-between ml-4 my-4 z-10 
+      h-full border-r-2 border-neutral-200 absolute w-[15rem] flex items-center justify-between ml-4 my-4 
       `}
       >
         <div
@@ -44,7 +44,7 @@ function layout({ children }) {
       <div
         className={`
         ${isMenuOpen ? "" : "hidden"}
-        w-[18.5rem] ml-4 flex flex-col bg-my-white 
+        h-full border-r-2 border-neutral-200 w-[18.5rem] ml-4 flex flex-col bg-my-white 
         `}
       >
         <div className="flex gap-2">
@@ -96,10 +96,6 @@ function layout({ children }) {
 
       {/* timetable of one group */}
       <div
-        className={`
-      ${isMenuOpen ? "hidden" : ""}
-      md:block ml-[5rem]
-      `}
       >
         {children}
       </div>
