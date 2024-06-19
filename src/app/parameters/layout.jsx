@@ -24,7 +24,7 @@ const LinkItem = ({ linkPath, linkTitle }) => {
 
 export default function timetableLayout({ children }) {
   return (
-    <section>
+    <section className="w-full">
       {/* parameters header */}
       <div className="flex gap-x-5 p-2 mt-2 overflow-x-auto md:justify-center md:mr-4">
         <LinkItem linkPath="/parameters/teachers" linkTitle="Enseignants" />

@@ -20,7 +20,7 @@ function Modal({ isOpen, children, onClose }) {
           </div>
         </div>
         {children}
-      </div>
+      </div>      
     </div>
   );
 }
