@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addRoom } from "@/api/roomApi";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewRoom({ rooms, setRooms }) {
@@ -9,15 +10,15 @@ function NewRoom({ rooms, setRooms }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
-    const data = new FormData(form)
-    const roomObject = {}
+    const data = new FormData(form);
+    const roomObject = {};
     data.forEach((value, key) => (roomObject[key] = value));
-    addRoom(roomObject, setIsNewRoom, rooms, setRooms )
+    addRoom(roomObject, setIsNewRoom, rooms, setRooms);
   };
 
   return (
     <div>
-      <AddButton
+      <OpenAddButton
         title="Ajouter salle"
         handleAdd={() => setIsNewRoom(() => true)}
       />
@@ -44,14 +45,7 @@ function NewRoom({ rooms, setRooms }) {
             placeholder="Capacité de la salle"
             required
           />
-          <input
-            type="submit"
-            className=" 
-      bg-gradient-to-br from-green-primary to-blue-secondary 
-      py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-      "
-            value="Ajouter"
-          />
+          <AddButton />
         </form>
       </Modal>
     </div>

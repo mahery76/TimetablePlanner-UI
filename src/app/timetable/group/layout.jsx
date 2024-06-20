@@ -24,12 +24,12 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full" id="timetable_group_layout">
       {/* full side menus open*/}
       <div
       id="fullSideMenu"
         className={`
-      absolute w-full h-full bg-black/40 z-10 
+      absolute w-full h-[90vh] bg-black/40 z-10 
       ${isMenuOpen ? "" : "hidden"}
       `}
       onClick={() => setIsMenuOpen(() => false)}
@@ -88,7 +88,7 @@ function layout({ children }) {
         </div>
       </div>
 
-      <div className="absolute flex h-full w-full">
+      <div className="absolute flex h-[90vh] w-full">
         {/* side menus to open section*/}
         <div
           className={`

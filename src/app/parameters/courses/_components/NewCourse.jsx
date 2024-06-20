@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addCourse } from "@/api/courseApi";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewCourse({ majors }) {
@@ -15,7 +16,7 @@ function NewCourse({ majors }) {
   };
   return (
     <div className="flex justify-center items-center">
-      <AddButton
+      <OpenAddButton
         title="Ajouter unité d'enseignement"
         handleAdd={() => setIsNewCourse(() => true)}
       />
@@ -48,14 +49,7 @@ function NewCourse({ majors }) {
             ))}
           </select>
 
-          <input
-            type="submit"
-            className=" 
-                        bg-gradient-to-br from-green-primary to-blue-secondary 
-                        py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-                        "
-            value="Ajouter"
-          />
+       <AddButton />
         </form>
       </Modal>
     </div>

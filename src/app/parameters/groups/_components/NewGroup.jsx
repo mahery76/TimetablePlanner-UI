@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addGroup } from "@/api/groupApi";
 import { useRouter } from "next/navigation";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewGroup({ majors }) {
@@ -21,7 +22,7 @@ function NewGroup({ majors }) {
   return (
     <div className="flex justify-center items-center">
 
-      <AddButton
+      <OpenAddButton
         title="Ajouter classe"
         handleAdd={() => setIsNewGroup(() => true)}
       />
@@ -65,14 +66,8 @@ function NewGroup({ majors }) {
             ))}
           </select>
 
-          <input
-            type="submit"
-            className=" 
-                      bg-gradient-to-br from-green-primary to-blue-secondary 
-                      py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-                      "
-            value="Ajouter"
-          />
+          <AddButton />
+
         </form>
       </Modal>
     </div>

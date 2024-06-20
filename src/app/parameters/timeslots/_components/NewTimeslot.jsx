@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addTimeslot } from "@/api/timeslotsApi";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewTimeslot({ timeslots, setTimeslots }) {
@@ -18,7 +19,7 @@ function NewTimeslot({ timeslots, setTimeslots }) {
 
   return (
     <div className="flex justify-center items-center">
-      <AddButton
+      <OpenAddButton
         title="Ajouter créneaux"
         handleAdd={() => setIsNewTimeslot(() => true)}
       />
@@ -40,14 +41,7 @@ function NewTimeslot({ timeslots, setTimeslots }) {
             placeholder="Intervale du créneaux"
             required
           />
-          <input
-            type="submit"
-            className=" 
-      bg-gradient-to-br from-green-primary to-blue-secondary 
-      py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-      "
-            value="Ajouter"
-          />
+          <AddButton />
         </form>
       </Modal>
     </div>

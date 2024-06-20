@@ -64,14 +64,7 @@ function NewActivity({ courses, teachers, groups, rooms, core_class_refs }) {
           <SelectElement  dataList={groups}          dataId="group_id"        dataLabel="Classe" dataDisplay="group_name"/>
           <SelectElement  dataList={rooms}           dataId="room_id"         dataLabel="Salle" dataDisplay="room_name"/>
           <SelectElement  dataList={core_class_refs} dataId="core_class_ref_id"  dataLabel="Réf Tronc Commun" dataDisplay="core_class_ref_name"/>
-          <input
-            type="submit"
-            className=" 
-                        bg-gradient-to-br from-green-primary to-blue-secondary 
-                        py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-                        "
-            value="Ajouter"
-          />
+       <AddButton />
         </form>
       </Modal>
 

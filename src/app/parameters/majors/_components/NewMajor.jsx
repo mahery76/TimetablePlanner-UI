@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addMajor } from "@/api/majorsApi";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewMajor({ majors, setMajors }) {
@@ -16,7 +17,7 @@ function NewMajor({ majors, setMajors }) {
   };
   return (
     <div>
-      <AddButton
+      <OpenAddButton
         title="Ajouter département"
         handleAdd={() => setIsNewMajor(() => true)}
       />
@@ -37,14 +38,8 @@ function NewMajor({ majors, setMajors }) {
             placeholder="Nom du département"
             required
           />
-          <input
-            type="submit"
-            className=" 
-      bg-gradient-to-br from-green-primary to-blue-secondary 
-      py-1.5 rounded-lg cursor-pointer flex w-full justify-center text-my-white
-      "
-            value="Ajouter"
-          />
+               <AddButton />
+
         </form>
       </Modal>
     </div>

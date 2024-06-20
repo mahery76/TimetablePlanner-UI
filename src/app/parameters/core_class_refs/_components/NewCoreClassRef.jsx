@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import { addCore_class_ref } from "@/api/core_class_refsApi";
+import OpenAddButton from "@/components/OpenAddButton";
 import AddButton from "@/components/AddButton";
 
 function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
@@ -21,7 +22,7 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
   };
   return (
     <div className="flex justify-center items-center">
-      <AddButton
+      <OpenAddButton
         title="Ajouter référence"
         handleAdd={() => setIsNew_Core_class_ref(() => true)}
       />
@@ -43,14 +44,7 @@ function NewCoreClassRef({ core_class_refs, setCore_class_refs }) {
             placeholder="Référence du tronc commun"
             required
           />
-          <input
-            type="submit"
-            className=" 
-      bg-gradient-to-br from-green-200 to-blue-200 
-      py-1.5 rounded-lg cursor-pointer flex w-full justify-center
-      "
-            value="Ajouter"
-          />
+          <AddButton />
         </form>
       </Modal>
     </div>
