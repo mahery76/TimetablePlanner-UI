@@ -1,21 +1,3 @@
-// //user_roles
-// export const userRolesData = [
-//   { user_role_name: "admin" },
-//   { user_role_name: "Enseignant" },
-//   { user_role_name: "Etudiant" },
-// ];
-
-// //users
-// export const usersData = [
-//   { username: "adminUser", user_role_id: 1 },
-//   { username: "teacherUser1", user_role_id: 2 },
-//   { username: "teacherUser2", user_role_id: 2 },
-//   { username: "studentUser1", user_role_id: 3 },
-//   { username: "studentUser2", user_role_id: 3 },
-//   { username: "studentUser3", user_role_id: 3 },
-// ];
-
-//majors
 export const majorsData = [
   { major_name: "Gestion" },
   { major_name: "Informatique" },
