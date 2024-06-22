@@ -17,23 +17,28 @@
           </div>
         </div>
         <!-- {children} -->
-        <div class="w-[20rem] h-[20rem] bg-white">
-            <div>
-                <div>Matieres</div>
-                <div>Prof</div>
-                <div>date</div>
-                <div>Creneaux</div>
-                <div>Salle</div>
-                <div>Volume horaire</div>
-                <div>Volume horaire restante</div>
-                <div>Reference tronc commun</div>
+        <div class="w-[20rem] h-[20rem] text-xs sm:text-md bg-white rounded-md p-2 flex flex-col justify-evenly gap-4">
+          <div
+            class="w-full p-4 flex flex-col gap-1 items-center bg-neutral-100"
+          >
+            <div class="w-full font-bold italic">
+              Traitement automatique des langages naturels
             </div>
+            <div class="w-full">RAFANOMEZANA Lovanirainy</div>
+            <div class="w-full">Lun 05 Juin 2024</div>
+            <div class="w-full">08:00 - 10:00</div>
+            <div class="w-full">Grande Salle N02</div>
+            <div class="w-full">
+              <span>20</span><span>h</span><span>/</span><span>30</span><span>h</span>
+            </div>
+            <div class="w-full">Tronc Commun <span>TC02</span></div>
+          </div>
 
-            <div class="flex">
-                <div>Marquer comme dispensE</div>
-                <div>Modifer</div>
-                <div>Supprimer</div>
-            </div>
+          <div class="flex justify-evenly">
+            <div class="p-2 bg-blue-200 border-2 border-blue-600 hover:bg-blue-300 rounded-md cursor-pointer">Marquer comme terminée</div>
+            <!-- <div class="p-2 bg-green-200 border-2 border-green-600 hover:bg-green-300 rounded-md cursor-pointer">Modifer</div> -->
+            <div class="p-2 bg-violet-200 border-2 border-violet-600 hover:bg-violet-300 rounded-md cursor-pointer">Supprimer</div>
+          </div>
         </div>
       </div>
     </div>
