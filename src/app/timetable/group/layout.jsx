@@ -24,15 +24,15 @@ function layout({ children }) {
   }, []);
 
   return (
-    <div className="w-full h-full" id="timetable_group_layout">
+    <div className="w-full h-[90vh]" id="timetable_group_layout">
       {/* full side menus open*/}
       <div
-      id="fullSideMenu"
+        id="fullSideMenu"
         className={`
-      absolute w-full h-[90vh] bg-black/40 z-10 
+      absolute w-full h-[90vh] bg-black/40 z-30 
       ${isMenuOpen ? "" : "hidden"}
       `}
-      onClick={() => setIsMenuOpen(() => false)}
+        onClick={() => setIsMenuOpen(() => false)}
       >
         {/* left side menus open */}
         <div
@@ -92,11 +92,11 @@ function layout({ children }) {
         {/* side menus to open section*/}
         <div
           className={`
-        h-full border-r-2 border-neutral-200 ml-4 pr-4
+        h-[90vh] w-1/12 border-r-2 border-neutral-200 flex justify-center items-start
         `}
         >
           <div
-            className="p-3 cursor-pointer mt-4 rounded-full bg-neutral-100 hover:bg-neutral-200"
+            className="mt-4 p-3 cursor-pointer rounded-full bg-neutral-100 hover:bg-neutral-200"
             onClick={() => setIsMenuOpen(() => true)}
           >
             <CiMenuBurger />
@@ -104,7 +104,7 @@ function layout({ children }) {
         </div>
 
         {/* timetable of one group */}
-        <div className="h-full w-full">{children}</div>
+        <div className="h-[90vh] w-11/12">{children}</div>
       </div>
     </div>
   );
