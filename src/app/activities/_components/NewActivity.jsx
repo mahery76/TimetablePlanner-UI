@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import {addActivity} from "@/api/activityApi"
-
+import {AddButton} from '@/components/AddButton'
 function SelectElement ({dataList, dataId, dataDisplay, dataLabel}){
   return (
          <>
@@ -24,7 +24,7 @@ function SelectElement ({dataList, dataId, dataDisplay, dataLabel}){
 }
 
 function NewActivity({ courses, teachers, groups, rooms, core_class_refs }) {
-  const [isNewActiviy, setIsNewActivity] = useState(false);
+  const [isNewActiviy, setIsNewActivity``] = useState(false);
   const handleSubmit = (event) => {
     const form = event.target;
     const data = new FormData(form);

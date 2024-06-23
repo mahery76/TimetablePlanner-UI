@@ -22,7 +22,7 @@ function page() {
     <div className="w-full h-[90vh]">
       {/* date navigation and buttons */}
       <div className="h-[10vh] flex  md:justify-center ">
-        <div className="w-full flex backdrop:gap-4 md:gap-8">
+        <div className="w-full max-w-[886px] flex gap-4 md:gap-8">
           {/* timetable info and previous and next buttons*/}
           <div className="w-2/3 md:w-1/3 flex justify-evenly">
             <div className="flex items-center " id="previous_button">
@@ -122,40 +122,40 @@ function page() {
       {/* timetable section*/}
       <div className="h-[80vh] w-full flex justify-center">
         <div className="overflow-auto">
-          <table>
+          <table className="border-collapse border border-neutral-400">
             <thead>
               <tr>
-                <th className="z-20 top-0 left-0 sticky">
+                <th className="border border-neutral-400 z-20 top-0 left-0 sticky">
                   <div className="bg-white p-1 w-[6rem]">Creneaux</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Lun 10</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Mar 10</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Mer 10</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Jeu 10</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Ven 10</div>
                 </th>
-                <th className="z-10 top-0 sticky">
+                <th className="border border-neutral-400 z-10 top-0 sticky">
                   <div className="bg-white p-1 w-[8rem]">Sam 10</div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="z-0">
-                <td className="z-10 left-0 sticky">
+              <tr className="  z-0">
+                <td className="border border-neutral-400 z-10 left-0 sticky">
                   <div className="slot flex justify-center items-center text-center bg-white h-[9rem] w-[6rem]">
                     08:00-10:00
                   </div>
                 </td>
-                <td className="z-0">
+                <td className=" border border-neutral-400  z-0">
                   <div className="occupation p-2 flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem] hover:bg-blue-200 cursor-pointer">
                     <div
                       className="text-xs truncate font-bold italic"
@@ -168,7 +168,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 " >
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -178,7 +178,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -188,7 +188,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -198,7 +198,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -208,7 +208,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -219,27 +219,26 @@ function page() {
                   </div>
                 </td>
               </tr>
-              <tr className="z-0">
-                <td className="z-10 left-0 sticky">
+              <tr className="  z-0">
+                <td className="border border-neutral-400 z-10 left-0 sticky">
                   <div className="slot flex justify-center items-center text-center bg-white h-[9rem] w-[6rem]">
                     08:00-10:00
                   </div>
                 </td>
-                <td className="z-0">
+                <td className=" border border-neutral-400  z-0">
                   <div className="occupation p-2 flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem] hover:bg-blue-200 cursor-pointer">
                     <div
                       className="text-xs truncate font-bold italic"
                       title="Traitement Automatique de langage naturel  Traitement Automatique"
                     >
                       Automatisme Electronique
-                      {/* Traitement Automatique de langage naturel  Traitement Automatique */}
                     </div>
                     <div className="text-xs">
                       RAFANOMEZANA Lovanirainy Theogene Eddy Celestin
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 " >
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -249,7 +248,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -259,7 +258,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -269,7 +268,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -279,7 +278,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -290,27 +289,26 @@ function page() {
                   </div>
                 </td>
               </tr>
-              <tr className="z-0">
-                <td className="z-10 left-0 sticky">
+              <tr className="  z-0">
+                <td className="border border-neutral-400 z-10 left-0 sticky">
                   <div className="slot flex justify-center items-center text-center bg-white h-[9rem] w-[6rem]">
                     08:00-10:00
                   </div>
                 </td>
-                <td className="z-0">
+                <td className=" border border-neutral-400  z-0">
                   <div className="occupation p-2 flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem] hover:bg-blue-200 cursor-pointer">
                     <div
                       className="text-xs truncate font-bold italic"
                       title="Traitement Automatique de langage naturel  Traitement Automatique"
                     >
                       Automatisme Electronique
-                      {/* Traitement Automatique de langage naturel  Traitement Automatique */}
                     </div>
                     <div className="text-xs">
                       RAFANOMEZANA Lovanirainy Theogene Eddy Celestin
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 " >
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -320,7 +318,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -330,7 +328,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -340,7 +338,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -350,7 +348,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -361,27 +359,26 @@ function page() {
                   </div>
                 </td>
               </tr>
-              <tr className="z-0">
-                <td className="z-10 left-0 sticky">
+              <tr className="  z-0">
+                <td className="border border-neutral-400 z-10 left-0 sticky">
                   <div className="slot flex justify-center items-center text-center bg-white h-[9rem] w-[6rem]">
                     08:00-10:00
                   </div>
                 </td>
-                <td className="z-0">
+                <td className=" border border-neutral-400  z-0">
                   <div className="occupation p-2 flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem] hover:bg-blue-200 cursor-pointer">
                     <div
                       className="text-xs truncate font-bold italic"
                       title="Traitement Automatique de langage naturel  Traitement Automatique"
                     >
                       Automatisme Electronique
-                      {/* Traitement Automatique de langage naturel  Traitement Automatique */}
                     </div>
                     <div className="text-xs">
                       RAFANOMEZANA Lovanirainy Theogene Eddy Celestin
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 " >
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -391,7 +388,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -401,7 +398,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -411,7 +408,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -421,7 +418,7 @@ function page() {
                     </div>
                   </div>
                 </td>
-                <td>
+                <td className=" border border-neutral-400 ">
                   <div className="occupation flex flex-col justify-evenly bg-white text-center h-[9rem] w-[8rem]">
                     <div className="text-xs">
                       Traitement Automatique de langage naturel
@@ -432,6 +429,7 @@ function page() {
                   </div>
                 </td>
               </tr>
+        
             </tbody>
           </table>
         </div>

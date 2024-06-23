@@ -37,7 +37,7 @@ function layout({ children }) {
         {/* left side menus open */}
         <div
           className={`
-          h-full border-r-2 border-neutral-200 w-[15rem] pl-4 pr-4 flex flex-col bg-my-white
+         h-[90vh] border-r-2 border-neutral-200 w-[15rem] pl-4 pr-4 flex flex-col bg-my-white
           `}
           onClick={(e) => e.stopPropagation()}
         >
@@ -90,9 +90,9 @@ function layout({ children }) {
 
       <div className="absolute flex h-[90vh] w-full">
         {/* side menus to open section*/}
-        <div
+        <div  
           className={`
-        h-[90vh] w-1/12 border-r-2 border-neutral-200 flex justify-center items-start
+        h-[90vh] w-[3rem] border-r-2 border-neutral-200 flex justify-center items-start
         `}
         >
           <div

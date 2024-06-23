@@ -7,7 +7,7 @@ function Modal({ isOpen, children, onClose }) {
 
   return (
     <div
-      className="fixed z-10 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center"
+      className="fixed z-40 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center"
       onClick={onClose}
     >
       <div
