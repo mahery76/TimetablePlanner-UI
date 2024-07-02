@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import {addActivity} from "@/api/activityApi"
-import {AddButton} from '@/components/AddButton'
+import AddButton from '@/components/AddButton'
+import OpenOpenAddButton from "@/components/OpenAddButton";
 function SelectElement ({dataList, dataId, dataDisplay, dataLabel}){
   return (
          <>
@@ -24,7 +25,7 @@ function SelectElement ({dataList, dataId, dataDisplay, dataLabel}){
 }
 
 function NewActivity({ courses, teachers, groups, rooms, core_class_refs }) {
-  const [isNewActiviy, setIsNewActivity``] = useState(false);
+  const [isNewActiviy, setIsNewActivity] = useState(false);
   const handleSubmit = (event) => {
     const form = event.target;
     const data = new FormData(form);
@@ -35,15 +36,12 @@ function NewActivity({ courses, teachers, groups, rooms, core_class_refs }) {
    
   return (
     <div className="flex justify-center items-center">
-      <button
-        className="flex w-full  items-center justify-center p-0.5  overflow-hidden rounded-lg group 
-                      bg-gradient-to-br from-green-primary to-blue-secondary group-hover:from-green-primary group-hover:to-blue-primary "
-        onClick={() => setIsNewActivity(() => true)}
-      >
-        <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Ajouter activité
-        </span>
-      </button>
+     
+
+      <OpenOpenAddButton
+        title="Ajouter activité"
+        handleAdd={() => setIsNewActivity(() => true)}
+      />
 
       <Modal isOpen={isNewActiviy} onClose={() => setIsNewActivity(() => false)}>
         <h2 className="font-bold text-center text-cyan-600 my-4">
