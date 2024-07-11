@@ -46,12 +46,12 @@ export default function RootLayout({ children }) {
           </div> */}
           <div className="flex gap-4 justify-center items-center ">
             <Menu
-              title="Classes"
+              title="Classe"
               path="/timetable/group"
               icon={<CiCalendar />}
               />
             <Menu
-              title="Profs"
+              title="Enseignants"
               path="/timetable/teacher"
               icon={<CiCalendar />}
             />

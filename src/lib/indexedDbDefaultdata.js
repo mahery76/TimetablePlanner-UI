@@ -10,7 +10,7 @@ export const coursesData = [
   { course_name: "Comportement Organisationnel", major_id: 1 },
   { course_name: "Gestion Stratégique", major_id: 1 },
   { course_name: "Gestion des Opérations", major_id: 1 },
-
+  
   { course_name: "Algorithmes", major_id: 2 },
   { course_name: "Structures de données", major_id: 2 },
   { course_name: "Réseaux informatiques", major_id: 2 },
@@ -121,38 +121,9 @@ export const core_class_refsData = [
   { core_class_ref_name: "ccr 4" },
 ];
 
-// //students
-// export const studentsData = [
-//   { student_name: "Alex Johnson", group_id: 1 },
-//   { student_name: "Brittany Smith", group_id: 2 },
-//   { student_name: "Charles Brown", group_id: 3 },
-//   { student_name: "Danielle Miller", group_id: 4 },
-//   { student_name: "Ethan Williams", group_id: 5 },
-//   { student_name: "Fiona Jones", group_id: 6 },
-// ];
-
-//teacher_availabilities
-export const teacherAvailabilitiesData = [
-  {
-    availability_date: new Date("2022-09-01T08:00:00"),
-    teacher_id: 1,
-    timeslot_id: 1,
-  },
-  {
-    availability_date: new Date("2022-09-01T10:00:00"),
-    teacher_id: 1,
-    timeslot_id: 2,
-  },
-  {
-    availability_date: new Date("2022-09-02T01:00:00"),
-    teacher_id: 2,
-    timeslot_id: 3,
-  },
-  {
-    availability_date: new Date("2022-09-02T03:00:00"),
-    teacher_id: 2,
-    timeslot_id: 4,
-  },
-];
-
 //activities
+
+
+
+
+

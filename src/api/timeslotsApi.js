@@ -1,4 +1,5 @@
-import { db } from "@/lib/indexedDb";export const getAllTimeslots = (setTimeslots) => {
+import { db } from "@/lib/indexedDb";
+export const getAllTimeslots = (setTimeslots) => {
   db.timeslots.toArray().then(setTimeslots);
 };
 

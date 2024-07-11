@@ -22,7 +22,22 @@ db.version(1).stores({
   core_class_refs: "++core_class_ref_id, core_class_ref_name",
   rooms: "++room_id, room_name, room_capacity",
   activities:
-    "++activity_id, activity_hours, activity_remaining_hours, course_id, teacher_id, group_id, room_id, core_class_ref_id",
+    `++activity_id, 
+    activity_hours, 
+    activity_remaining_hours, 
+    course_id, 
+    teacher_id, 
+    group_id, 
+    room_id, 
+    core_class_ref_id
+    `,
+  occupations: 
+  `
+  ++occupation_id, 
+  activity_id,
+  teacher_availability_id, 
+  room_id
+  `
 });
 
 db.on("populate", () => {

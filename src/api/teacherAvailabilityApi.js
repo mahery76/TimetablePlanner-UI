@@ -1,5 +1,5 @@
-import { normalizeDate } from "@/_lib/Calendar"
-import {db} from "@/_lib/indexedDb"
+import { normalizeDate } from "@/lib/Calendar"
+import {db} from "@/lib/indexedDb"
 
 export const addTeacherAvailability = (availability_date,timeslot_id,teacher_id) => {
     const newTeacherAvailability = {

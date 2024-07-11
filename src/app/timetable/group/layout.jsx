@@ -104,7 +104,10 @@ function layout({ children }) {
         </div>
 
         {/* timetable of one group */}
-        <div className="h-[90vh] w-11/12">{children}</div>
+        <div className="h-[90vh] w-11/12">
+        
+        {children}
+        </div>
       </div>
     </div>
   );

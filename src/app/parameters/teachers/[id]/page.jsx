@@ -7,13 +7,13 @@ import {
   FaRegArrowAltCircleLeft,
   FaRegArrowAltCircleRight,
 } from "react-icons/fa";
-import InputAvailability from "@/parameters/teachers/_components/InputAvailability";
+import InputAvailability from "@/app/parameters/teachers/_components/InputAvailability";
 import {
   toFrDate,
   generateWeekDates,
   setToNextWeek,
   setToPreviousWeek,
-} from "@/_lib/Calendar";
+} from "@/lib/Calendar";
 
 function WeekdayCalendar() {
   // to get the name of the teacher
@@ -33,7 +33,6 @@ function WeekdayCalendar() {
   useEffect(() => {
     setWeekDates(generateWeekDates(currentDay));
     getAllTimeslots(setTimeslots);
-    console.log(searchParams);
   }, [currentDay]);
   return (
     <>
