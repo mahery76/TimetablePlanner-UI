@@ -122,7 +122,17 @@ export const core_class_refsData = [
 ];
 
 //activities
-
+export const activities_data = [
+  {
+    activity_hours: 30, 
+    activity_remaining_hours: 0, 
+    course_id: 1, 
+    teacher_id: 1, 
+    group_id: 1, 
+    room_id: 1, 
+    core_class_ref_id: null,
+  }
+]
 
 
 
