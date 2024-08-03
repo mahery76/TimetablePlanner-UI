@@ -97,7 +97,7 @@ function WeekdayCalendar() {
               </tr>
             </thead>
             <tbody>
-              {timeslots.map((timeslot) => (
+              {timeslots.map((timeslot) => \(
                 <tr key={timeslot.timeslot_id}>
                   <td className="px-1.5 py-1.5 text-center">
                     <InputAvailability

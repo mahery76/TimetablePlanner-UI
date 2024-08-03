@@ -10,7 +10,7 @@ export const coursesData = [
   { course_name: "Comportement Organisationnel", major_id: 1 },
   { course_name: "Gestion Stratégique", major_id: 1 },
   { course_name: "Gestion des Opérations", major_id: 1 },
-  
+
   { course_name: "Algorithmes", major_id: 2 },
   { course_name: "Structures de données", major_id: 2 },
   { course_name: "Réseaux informatiques", major_id: 2 },
@@ -22,34 +22,35 @@ export const coursesData = [
   { course_name: "Ingénierie environnementale", major_id: 3 },
 
   { course_name: "Français" },
-  { course_name: "Espagnole" },
-  { course_name: "Mandarin" },
+  { course_name: "Anglais" },
+  { course_name: "Algèbre" },
+  { course_name: "Probabilité et Statistique" },
+  { course_name: "Bureautique" }
+
 ];
 
 //groups
 export const groupsData = [
-  { group_size: 30, group_name: "Gestion L1 A", major_id: 1 },
-  { group_size: 30, group_name: "Gestion L1 B", major_id: 1 },
-  { group_size: 30, group_name: "Informatique L1", major_id: 2 },
-  { group_size: 30, group_name: "Informatique L2", major_id: 2 },
-  { group_size: 30, group_name: "Ingénierie Civil L1", major_id: 3 },
-  { group_size: 30, group_name: "Ingénierie Civil L2", major_id: 3 },
+  { group_size: 20, group_name: "Gestion L1 A", major_id: 1 },
+  { group_size: 20, group_name: "Gestion L1 B", major_id: 1 },
+  { group_size: 20, group_name: "Informatique L1", major_id: 2 },
+  { group_size: 20, group_name: "Ingénierie Civil L1", major_id: 3 },
 ];
 //teachers
 export const teachersData = [
   {
-    teacher_name: "John Doe",
-    teacher_title: "Docteur en Sciences de l'Éducation",
+    teacher_name: "SAHIVELO Kevin",
+    teacher_title: "Master II en Comptabilité et Finance",
     teacher_profil_pic: "john_doe.png",
   },
   {
     teacher_name: "RAFANOMEZANA Celestin",
-    teacher_title: "Professeur en Genie Mecanique",
+    teacher_title: "Docteur en Marketing et Strategie",
     teacher_profil_pic: "jane_smith.png",
   },
   {
     teacher_name: "FEHIZORO Fanaperana",
-    teacher_title: "Docteur en Comptabilité",
+    teacher_title: "Docteur en Science Cognitive",
     teacher_profil_pic: "emily_johnson.png",
   },
   {
@@ -64,7 +65,22 @@ export const teachersData = [
   },
   {
     teacher_name: "RAVAOARISOA Finaritra",
-    teacher_title: "Master en Culture et Linguistique",
+    teacher_title: "Master I en Batiment et Travaux Publics",
+    teacher_profil_pic: "daniel_miller.png",
+  },
+  {
+    teacher_name: "ANDRIAMIHAJA Zorphine",
+    teacher_title: "Master en Langue et Culture",
+    teacher_profil_pic: "michael_brown.png",
+  },
+  {
+    teacher_name: "RANKOTONDRAVALY Ernestine",
+    teacher_title: "Licence en langue et culture",
+    teacher_profil_pic: "jessica_davis.png",
+  },
+  {
+    teacher_name: "HARISON Miary Fenitra",
+    teacher_title: "Master en Génie Logiciel",
     teacher_profil_pic: "daniel_miller.png",
   },
 ];
@@ -101,11 +117,11 @@ export const roomsData = [
   },
   {
     room_name: "Room 201",
-    room_capacity: 30,
+    room_capacity: 50,
   },
   {
     room_name: "Room 202",
-    room_capacity: 25,
+    room_capacity: 50,
   },
   {
     room_name: "Computer Lab",
@@ -119,19 +135,76 @@ export const core_class_refsData = [
   { core_class_ref_name: "ccr 2" },
   { core_class_ref_name: "ccr 3" },
   { core_class_ref_name: "ccr 4" },
+  { core_class_ref_name: "ccr 5" },
+  { core_class_ref_name: "ccr 6" },
 ];
 
 //activities
 export const activities_data = [
+  //g1
   {
-    activity_hours: 30, 
-    activity_remaining_hours: 0, 
-    course_id: 1, 
-    teacher_id: 1, 
-    group_id: 1, 
-    room_id: 1, 
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 1,
+    teacher_id: 1,
+    group_id: 1,
+    room_id: 1,
     core_class_ref_id: null,
-  }
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 2,
+    teacher_id: 1,
+    group_id: 1,
+    room_id: 1,
+    core_class_ref_id: null,
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 3,
+    teacher_id: 1,
+    group_id: 1,
+    room_id: 1,
+    core_class_ref_id: null,
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 4,
+    teacher_id: 2,
+    group_id: 1,
+    room_id: 1,
+    core_class_ref_id: null,
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 5,
+    teacher_id: 2,
+    group_id: 1,
+    room_id: 1,
+    core_class_ref_id: null,
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 14,
+    teacher_id: 7,
+    group_id: 1,
+    room_id: 4,
+    core_class_ref_id: 1,
+  },
+  {
+    activity_hours: 30,
+    activity_remaining_hours: 0,
+    course_id: 15,
+    teacher_id: 8,
+    group_id: 1,
+    room_id: 4,
+    core_class_ref_id: 2,
+  },
 ]
 
 
