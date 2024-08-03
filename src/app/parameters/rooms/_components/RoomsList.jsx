@@ -28,7 +28,7 @@ function RoomsList({ rooms, setRooms }) {
       {/* rooms list */}
       <div className="overflow-auto h-[45vh] w-full ">
         <table className="w-full">
-          <thead className="mb-3">
+          <thead className="mb-3 sticky top-0 bg-white z-20">
             <tr>
               {/* for the delete button column */}
               <th className="px-4 sticky top-0 "></th>

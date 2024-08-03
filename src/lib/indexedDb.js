@@ -5,7 +5,6 @@ import {
   coursesData,
   groupsData,
   majorsData,
-  teacherAvailabilitiesData,
   teachersData,
   timeslotsData,
 } from "./indexedDbDefaultdata";
@@ -43,7 +42,6 @@ db.version(1).stores({
 db.on("populate", () => {
   db.teachers.bulkAdd(teachersData);
   db.timeslots.bulkAdd(timeslotsData);
-  db.teacher_availabilities.bulkAdd(teacherAvailabilitiesData);
   db.majors.bulkAdd(majorsData);
   db.groups.bulkAdd(groupsData);
   db.courses.bulkAdd(coursesData);

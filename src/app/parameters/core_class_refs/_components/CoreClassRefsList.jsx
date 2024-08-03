@@ -28,7 +28,7 @@ function CoreClassRefsList({ core_class_refs, setCore_class_refs }) {
        {/* core_class_refs's list */}
        <div className="overflow-auto h-[45vh] w-full">
         <table className="flex flex-col w-full">
-          <thead className="mb-3">
+          <thead className="mb-3 sticky top-0 bg-white z-20">
             <tr>
               <th className="px-4 sticky top-0 "></th>
               <th className="px-4 sticky top-0 mx-auto w-full">Références des Activités en Tronc commun</th>

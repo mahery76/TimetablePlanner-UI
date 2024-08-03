@@ -32,14 +32,14 @@ function TeachersList({ teachers, setTeachers }) {
     {/* teachers's list */}
       <div className="overflow-auto h-[45vh] w-full">
         <table className="w-full">
-          <thead className="mb-3">
+          <thead className="mb-3 sticky top-0 bg-white z-20">
             <tr>
               <th className="px-4 sticky top-0  ml-0"></th>
               <th className="px-4 sticky top-0  ml-0">Nom</th>
               <th className="px-4 sticky top-0  ml-0">Titre</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="z-0">
             {filteredTeachers.map((teacher) => (
               <tr
                 key={teacher.teacher_id}
